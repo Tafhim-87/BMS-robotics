@@ -1,0 +1,10 @@
+.rotate1 {
+  transform: rotateY(30deg);
+}
+.rotate2 {
+  transform: rotateY(-30deg);
+}
+
+.mother {
+  perspective: 700px;
+}

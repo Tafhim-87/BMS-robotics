@@ -20,7 +20,7 @@ const Hero = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="container flex flex-col gap-[60px] mt-20">
+      <div className="container flex flex-col gap-[60px] mt-20 max-w-[1440px]">
         {/* Text Content */}
         <div className="text-center w-full flex flex-col gap-2 justify-center items-center">
           <h1 className="text-[58px] leading-[63px] font-bold text-[#1D242D] w-[610px]">

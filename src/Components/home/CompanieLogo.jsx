@@ -17,7 +17,7 @@ export const CompanieLogo = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="container flex flex-col gap-10">
+      <div className="container flex flex-col gap-10 max-w-[1440px]">
         <h1 className="text-2xl font-semibold text-center">
           Used by the world's leading companies
         </h1>

@@ -71,7 +71,7 @@ const Products = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="container flex flex-col gap-16">
+      <div className="container flex flex-col gap-16 max-w-[1440px]">
         {/* Header Section */}
         <div className="flex justify-between items-center">
           <div className="relative flex flex-col gap-3">

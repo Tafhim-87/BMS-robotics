@@ -54,7 +54,7 @@ const Optimize = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="container flex flex-col gap-10">
+      <div className="container flex flex-col gap-10 max-w-[1440px]">
         {/* Header Section */}
         <div className="w-[675px] relative flex flex-col gap-3">
           <div className="flex flex-col items-start">

@@ -47,7 +47,7 @@ const industries = [
 export default function IndustryCards() {
   return (
     <section className="w-full flex flex-col justify-center items-center">
-      <div className="text-center mb-10 container">
+      <div className="text-center mb-10 container max-w-[1440px] px-10">
         <h3 className="text-[#EC0E0E] uppercase tracking-wide font-semibold">
           Industries We Serve
         </h3>

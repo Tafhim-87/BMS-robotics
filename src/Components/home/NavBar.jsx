@@ -5,7 +5,7 @@ import LogoSvg from "@/assets/svgs/LogoSvg";
 const NavBar = () => {
   return (
     <div className="w-full h-[112px] flex items-center justify-center">
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-between  max-w-[1440px] px-10">
         <Link href="/">
           <LogoSvg />
         </Link>

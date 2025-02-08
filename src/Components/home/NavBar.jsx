@@ -2,75 +2,73 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import LogoSvg from "@/assets/svgs/LogoSvg";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full h-[112px] flex items-center justify-center overflow-x-hidden relative">
+    <motion.nav
+      className="w-full h-[112px] flex items-center justify-center overflow-x-hidden relative"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container flex items-center justify-between max-w-[1440px] px-5 lg:px-10">
         <Link href="/">
           <LogoSvg />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-[34px]">
-          <Link
-            href="#"
-            className="text-lg font-medium hover:text-[#0B61EA] transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="#"
-            className="text-lg font-medium hover:text-[#0B61EA] transition-colors"
-          >
-            Solutions
-          </Link>
-          <Link
-            href="#"
-            className="text-lg font-medium hover:text-[#0B61EA] transition-colors"
-          >
-            Projects
-          </Link>
-          <Link
-            href="#"
-            className="text-lg font-medium hover:text-[#0B61EA] transition-colors"
-          >
-            Jobs
-          </Link>
-          <Link
-            href="#"
-            className="text-lg font-medium hover:text-[#0B61EA] transition-colors"
-          >
-            Blog
-          </Link>
-        </div>
+        <motion.div
+          className="hidden lg:flex items-center gap-[34px]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          {["Home", "Solutions", "Projects", "Jobs", "Blog"].map(
+            (item, index) => (
+              <Link
+                key={index}
+                href="#"
+                className="text-lg font-medium hover:text-[#0B61EA] transition-colors"
+              >
+                {item}
+              </Link>
+            )
+          )}
+        </motion.div>
 
         {/* Desktop Contact Button */}
-        <Link
-          href="#"
-          className="hidden lg:flex justify-center items-center text-white font-medium bg-[#0B61EA] rounded-lg w-[190px] p-[14px] active:scale-95 hover:bg-blue-700 transition-colors"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
-          Contact Us
-        </Link>
+          <Link
+            href="#"
+            className="hidden lg:flex justify-center items-center text-white font-medium bg-[#0B61EA] rounded-lg w-[190px] p-[14px] active:scale-95 hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+          </Link>
+        </motion.div>
 
         {/* Mobile Hamburger Button */}
         <button
           className="lg:hidden flex flex-col space-y-2 p-4"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span
+          <motion.span
             className={`w-8 h-[3px] bg-black transition-transform duration-300 ${
               isOpen ? "rotate-45 translate-y-2.5" : ""
             }`}
           />
-          <span
+          <motion.span
             className={`w-8 h-[3px] bg-black transition-opacity duration-300 ${
               isOpen ? "opacity-0" : "opacity-100"
             }`}
           />
-          <span
+          <motion.span
             className={`w-8 h-[3px] bg-black transition-transform duration-300 ${
               isOpen ? "-rotate-45 -translate-y-2.5" : ""
             }`}
@@ -78,47 +76,25 @@ const NavBar = () => {
         </button>
 
         {/* Mobile Menu Overlay */}
-        <div
-          className={`fixed top-[112px] left-0 w-full h-screen bg-white z-50 lg:hidden transform transition-all duration-300 ease-in-out ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        <motion.div
+          className={`fixed top-[112px] left-0 w-full h-screen bg-white z-50 lg:hidden`}
+          initial={{ x: "100%" }}
+          animate={{ x: isOpen ? "0%" : "100%" }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <div className="flex flex-col items-center pt-8 space-y-6">
-            <Link
-              href="#"
-              className="text-2xl font-medium hover:text-[#0B61EA] transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="#"
-              className="text-2xl font-medium hover:text-[#0B61EA] transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Solutions
-            </Link>
-            <Link
-              href="#"
-              className="text-2xl font-medium hover:text-[#0B61EA] transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              href="#"
-              className="text-2xl font-medium hover:text-[#0B61EA] transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Jobs
-            </Link>
-            <Link
-              href="#"
-              className="text-2xl font-medium hover:text-[#0B61EA] transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Blog
-            </Link>
+            {["Home", "Solutions", "Projects", "Jobs", "Blog"].map(
+              (item, index) => (
+                <Link
+                  key={index}
+                  href="#"
+                  className="text-2xl font-medium hover:text-[#0B61EA] transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item}
+                </Link>
+              )
+            )}
             <Link
               href="#"
               className="text-white font-medium bg-[#0B61EA] rounded-lg w-[190px] p-4 text-center hover:bg-blue-700 transition-colors"
@@ -127,9 +103,9 @@ const NavBar = () => {
               Contact Us
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

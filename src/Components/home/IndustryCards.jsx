@@ -51,15 +51,15 @@ export default function IndustryCards() {
         <h3 className="text-[#EC0E0E] uppercase tracking-wide font-semibold">
           Industries We Serve
         </h3>
-        <h2 className="text-3xl font-bold text-gray-900 mt-2">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">
           Solutions That are Customized for <br /> Different Industries
         </h2>
       </div>
-      <div className="flex flex-wrap w-full px-8 lg:px-0 lg:w-[1246px] gap-7">
+      <div className="flex flex-wrap w-full lg:w-[1246px] gap-7">
         {industries.map((industry, index) => (
           <div
             key={index}
-            className={`relative rounded-lg ${industry.width} overflow-hidden shadow-lg group cursor-pointer`}
+            className={`relative rounded-none md:rounded-lg ${industry.width} overflow-hidden shadow-lg group cursor-pointer`}
           >
             <Image
               src={industry.image}

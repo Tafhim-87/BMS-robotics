@@ -14,7 +14,7 @@ const Optimize = () => {
       image: img1,
       bgColor: "bg-[#F6F9FF]",
       barColor: "bg-[#0055FF]",
-      justify: "items-end pl-16",
+      justify: "items-end pl-8 md:pl-16",
       imageRound: "rounded-tl-lg",
     },
     {
@@ -24,9 +24,9 @@ const Optimize = () => {
       image: img2,
       bgColor: "bg-[#FEF9F2]",
       barColor: "bg-[#FFA500]",
-      justify: "items-start pr-16",
+      justify: "items-start pr-0 md:pr-16",
       imageRound: "rounded-tr-lg",
-      paddingLeft: "pl-16",
+      paddingLeft: " pl-8 md:pl-16",
     },
     {
       title: "IoT (Internet Of Things)",
@@ -37,7 +37,7 @@ const Optimize = () => {
       barColor: "bg-[#DF1028]",
       justify: "items-end",
       imageRound: "rounded-bl-lg",
-      paddingLeft: "pl-16",
+      paddingLeft: "pl-8 md:pl-16",
     },
     {
       title: "Smart Factory Solutions",
@@ -46,7 +46,7 @@ const Optimize = () => {
       image: img1,
       bgColor: "bg-[#4F00B60A]",
       barColor: "bg-[#4F00B6]",
-      justify: "items-start pr-16",
+      justify: "items-start pr-8 md:pr-16",
       imageRound: "rounded-br-lg",
       paddingLeft: "pl-16",
     },
@@ -56,21 +56,21 @@ const Optimize = () => {
     <div className="w-full flex justify-center">
       <div className="container flex flex-col gap-10 max-w-[1440px]">
         {/* Header Section */}
-        <div className="w-[675px] relative flex flex-col gap-3">
+        <div className="w-full md:w-[675px] relative flex flex-col gap-3">
           <div className="flex flex-col items-start">
             <PlusSvg className="absolute top-[-30px] left-[-30px]" />
             <h3 className="text-[22px] font-bold text-[#0B61EA]">
               Modern Solutions
             </h3>
           </div>
-          <h1 className="text-[40px] font-bold text-[#1D242D] leading-[52px]">
+          <h1 className="text-[28px] md:text-[40px] font-bold text-[#1D242D] leading-[42px] md:leading-[52px]">
             Advanced Robotics to <br /> Optimize Operations and Efficiency
           </h1>
         </div>
 
         <div className="flex flex-col justify-center w-full gap-[30px]">
           {/* First Row (First Two Cards) */}
-          <div className="flex flex-wrap gap-5 container justify-center">
+          <div className="flex flex-wrap gap-5 w-full justify-center">
             {cardData.slice(0, 2).map((card, index) => (
               <div
                 key={index}
@@ -82,15 +82,15 @@ const Optimize = () => {
                   <div className={`w-[90px] h-[6px] ${card.barColor}`}></div>
                 </div>
                 <div className={`flex flex-col gap-3 ${card.paddingLeft}`}>
-                  <h1 className="text-[34px] leading-[51px] font-bold">
+                  <h1 className="md:text-[34px] text-[24px] leading-[51px] font-bold">
                     {card.title}
                   </h1>
-                  <h4 className="text-[16px] leading-[26px]">
+                  <h4 className="text-[14px] md:text-[16px] leading-[26px]">
                     {card.description}
                   </h4>
                 </div>
                 {/* Image */}
-                <div className="relative w-[563px] h-[288px]">
+                <div className="relative w-[366px] sm:w-full md:w-[563px] h-[288px]">
                   <Image
                     src={card.image}
                     alt={card.title}
@@ -104,14 +104,14 @@ const Optimize = () => {
           </div>
 
           {/* Second Row (Last Two Cards Side by Side) */}
-          <div className="flex flex-wrap gap-5 container justify-center">
+          <div className="flex flex-wrap gap-5 w-full justify-center">
             {cardData.slice(2, 4).map((card, index) => (
               <div
                 key={index}
                 className={`${card.bgColor} w-[608px] flex flex-col ${card.justify} rounded-sm overflow-hidden gap-5 justify-between`}
               >
                 {/* Image */}
-                <div className="relative w-[563px] h-[288px]">
+                <div className="relative w-[366px] sm:w-full md:w-[563px] h-[288px]">
                   <Image
                     src={card.image}
                     alt={card.title}
@@ -124,7 +124,7 @@ const Optimize = () => {
                   <h1 className="text-[34px] leading-[51px] font-bold">
                     {card.title}
                   </h1>
-                  <h4 className="text-[16px] leading-[24px]">
+                  <h4 className="text-[14px] md:text-[16px] leading-[26px]">
                     {card.description}
                   </h4>
                 </div>

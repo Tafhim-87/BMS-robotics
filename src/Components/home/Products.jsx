@@ -70,10 +70,10 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="w-full flex justify-center">
+    <section className="w-full flex justify-center">
       <div className="container flex flex-col gap-16 max-w-[1440px]">
         {/* Header Section */}
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="relative flex flex-col gap-3">
             <div className="flex flex-col items-start">
               <PlusSvg className="absolute top-[-30px] left-[-30px]" />
@@ -81,7 +81,7 @@ const Products = () => {
                 Popular Products
               </h3>
             </div>
-            <h1 className="text-[40px] w-[565px] font-bold text-[#1D242D] leading-[52px]">
+            <h1 className="lg:text-[40px] text-[28px] lg:w-[565px] container font-bold text-[#1D242D] leading-[52px]">
               Support and after sales service at all times
             </h1>
           </div>
@@ -98,7 +98,7 @@ const Products = () => {
         {/* Products Section */}
         <div
           ref={scrollRef}
-          className="px-14 overflow-x-auto scrollbar-custom flex gap-10 scroll-smooth"
+          className="p-0 md:px-14 overflow-x-auto scrollbar-custom flex gap-10 scroll-smooth"
         >
           <div className="flex gap-8 min-w-max">
             {products.map((product, index) => (
@@ -119,7 +119,7 @@ const Products = () => {
         </div>
 
         {/* Scrollbar Navigation */}
-        <div className="w-full flex justify-end items-center gap-3">
+        <div className="w-full flex justify-center md:justify-end items-center gap-3">
           <button
             onClick={scrollLeft}
             className="border-[4px] rounded-xl border-solid rotate-180 border-[#B2BBC614] p-5"
@@ -143,7 +143,7 @@ const Products = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import ImageCarousel from "./ImageCarousel";
 import Image from "next/image";
-import img1 from "@/assets/imgs/VectorImg.png";
+import img1 from "@/assets/imgs/hero/VectorImg.png";
 import { motion } from "framer-motion";
 
 const images = ["/image1.png", "/image2.png", "/image3.png"]; // Replace with your image paths

@@ -1,16 +1,16 @@
 import CompLogo1 from "@/assets/svgs/companylogo/CompLogo1";
 import React from "react";
 import Image from "next/image";
-import img1 from "@/assets/imgs/company/comp1.png";
-import img2 from "@/assets/imgs/company/comp2.png";
-import img3 from "@/assets/imgs/company/comp3.png";
-import img4 from "@/assets/imgs/company/comp4.png";
-import img5 from "@/assets/imgs/company/comp5.png";
-import img6 from "@/assets/imgs/company/comp6.png";
-import img7 from "@/assets/imgs/company/comp7.png";
-import img8 from "@/assets/imgs/company/comp8.png";
-import img9 from "@/assets/imgs/company/comp9.png";
-import img10 from "@/assets/imgs/company/comp10.png";
+import img1 from "@/assets/imgs/hero/company/comp1.png";
+import img2 from "@/assets/imgs/hero/company/comp2.png";
+import img3 from "@/assets/imgs/hero/company/comp3.png";
+import img4 from "@/assets/imgs/hero/company/comp4.png";
+import img5 from "@/assets/imgs/hero/company/comp5.png";
+import img6 from "@/assets/imgs/hero/company/comp6.png";
+import img7 from "@/assets/imgs/hero/company/comp7.png";
+import img8 from "@/assets/imgs/hero/company/comp8.png";
+import img9 from "@/assets/imgs/hero/company/comp9.png";
+import img10 from "@/assets/imgs/hero/company/comp10.png";
 
 export const CompanieLogo = () => {
   const logos = [img3, img2, img1, img4, img5, img6, img7, img8, img9, img10];

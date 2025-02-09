@@ -5,8 +5,8 @@ import Arrow from "@/assets/svgs/Arrow";
 import PlusSvg from "@/assets/svgs/PlusSvg";
 import Link from "next/link";
 import Image from "next/image";
-import img1 from "@/assets/imgs/robo2.png";
-import img2 from "@/assets/imgs/robo3.png";
+import img1 from "@/assets/imgs/hero/robo2.png";
+import img2 from "@/assets/imgs/hero/robo3.png";
 import "./style.css";
 
 const products = [

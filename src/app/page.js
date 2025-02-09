@@ -5,6 +5,7 @@ import Hero from "@/Components/home/Hero";
 import IndustryCards from "@/Components/home/IndustryCards";
 import Optimize from "@/Components/home/Optimize";
 import Products from "@/Components/home/Products";
+import Support from "@/Components/home/Support";
 import React from "react";
 
 const page = () => {
@@ -16,6 +17,7 @@ const page = () => {
       <Automation />
       <IndustryCards />
       <Products />
+      <Support />
       <ConnectForm />
     </div>
   );

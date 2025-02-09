@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import img1 from "@/assets/imgs/industry1.jpg";
-import img2 from "@/assets/imgs/robo-img3.jpg";
-import img3 from "@/assets/imgs/vector1.png";
-import img4 from "@/assets/imgs/vector2.png";
+import img1 from "@/assets/imgs/hero/industry1.jpg";
+import img2 from "@/assets/imgs/hero/robo-img3.jpg";
+import img3 from "@/assets/imgs/hero/vector1.png";
+import img4 from "@/assets/imgs/hero/vector2.png";
 
 const industries = [
   {

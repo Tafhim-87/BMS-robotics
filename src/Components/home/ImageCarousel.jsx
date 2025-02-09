@@ -4,9 +4,9 @@ import Link from "next/link";
 import LogoSvg from "@/assets/svgs/LogoSvg";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import img1 from "@/assets/imgs/robo-img1.png";
-import img2 from "@/assets/imgs/robo-img2.jpg";
-import img3 from "@/assets/imgs/robo-img3.png";
+import img1 from "@/assets/imgs/hero/robo-img1.png";
+import img2 from "@/assets/imgs/hero/robo-img2.jpg";
+import img3 from "@/assets/imgs/hero/robo-img3.png";
 import "@/Components/home/index.css";
 
 const ImageCarousel = () => {

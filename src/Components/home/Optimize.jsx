@@ -2,9 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import img1 from "@/assets/imgs/robo-img1.jpg";
-import img2 from "@/assets/imgs/robo-img2.jpg";
-import img3 from "@/assets/imgs/robo-img3.jpg";
+import img1 from "@/assets/imgs/hero/robo-img1.jpg";
+import img2 from "@/assets/imgs/hero/robo-img2.jpg";
+import img3 from "@/assets/imgs/hero/robo-img3.jpg";
 import PlusSvg from "@/assets/svgs/PlusSvg";
 
 const cardData = [

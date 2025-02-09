@@ -1,5 +1,5 @@
-import img1 from "@/assets/imgs/frame.png";
-import img2 from "@/assets/imgs/FrameMobile.png";
+import img1 from "@/assets/imgs/hero/frame.png";
+import img2 from "@/assets/imgs/hero/FrameMobile.png";
 import Arrow from "@/assets/svgs/Arrow";
 import Image from "next/image";
 

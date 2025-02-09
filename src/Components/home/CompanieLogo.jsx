@@ -108,7 +108,7 @@ export const CompanieLogo = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "0px 0px -100px 0px" }}
         >
-          {logos.slice(0, 4).map((logo, index) => (
+          {logos.slice(4, 8).map((logo, index) => (
             <motion.div
               key={index}
               className="w-[80px] h-[32px] md:w-[144px] md:h-[55px]"
@@ -122,7 +122,7 @@ export const CompanieLogo = () => {
             className="col-span-4 flex justify-center gap-10"
             variants={containerVariants}
           >
-            {logos.slice(4, 6).map((logo, index) => (
+            {logos.slice(8, 10).map((logo, index) => (
               <motion.div
                 key={index}
                 className="w-[80px] h-[32px] md:w-[144px] md:h-[55px]"

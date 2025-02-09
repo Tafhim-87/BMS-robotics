@@ -48,7 +48,7 @@ const footerData = [
 
 export const Footer = () => {
   return (
-    <section className="w-full bg-[#1D242D] text-white py-16 px-5 md:px-10 overflow-x-hidden">
+    <section className="w-full bg-[#1D242D] text-white py-8 md:py-16 px-5 md:px-10 overflow-x-hidden">
       <div className="container max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-10">
           <WhiteLogo /> <div className="w-full bg-[#546881]/70 h-0.5"></div>

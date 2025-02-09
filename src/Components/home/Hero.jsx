@@ -23,7 +23,7 @@ const Hero = () => {
 
   return (
     <section className="w-full flex justify-center">
-      <div className="container flex flex-col gap-[30px] md:gap-[60px] mt-20 max-w-[1440px] px-4">
+      <div className="container flex flex-col gap-[30px] md:gap-[60px] mt-10 md:mt-20 max-w-[1440px] px-4">
         {/* Text Content */}
         <motion.div
           className="text-center w-full flex flex-col gap-2 justify-center items-center"

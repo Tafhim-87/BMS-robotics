@@ -1,6 +1,8 @@
-import CompLogo1 from "@/assets/svgs/companylogo/CompLogo1";
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
+import React from "react";
 import img1 from "@/assets/imgs/hero/company/comp1.png";
 import img2 from "@/assets/imgs/hero/company/comp2.png";
 import img3 from "@/assets/imgs/hero/company/comp3.png";
@@ -12,35 +14,125 @@ import img8 from "@/assets/imgs/hero/company/comp8.png";
 import img9 from "@/assets/imgs/hero/company/comp9.png";
 import img10 from "@/assets/imgs/hero/company/comp10.png";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const logoVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const headingVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 export const CompanieLogo = () => {
   const logos = [img3, img2, img1, img4, img5, img6, img7, img8, img9, img10];
 
   return (
     <div className="w-full flex justify-center">
       <div className="container flex flex-col gap-10 max-w-[1440px]">
-        <h1 className="text-2xl font-semibold text-center">
+        <motion.h1
+          className="text-2xl font-semibold text-center"
+          variants={headingVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        >
           Used by the world's leading companies
-        </h1>
-        <div className="flex gap-10 justify-center items-center">
+        </motion.h1>
+
+        {/* Desktop First Row */}
+        <motion.div
+          className="grid md:flex grid-cols-4 gap-5 lg:gap-10 justify-center items-center"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        >
           {logos.slice(0, 4).map((logo, index) => (
-            <div
+            <motion.div
               key={index}
               className="w-[80px] h-[32px] md:w-[144px] md:h-[55px]"
+              variants={logoVariants}
             >
               <Image src={logo} alt="Company Logo" width={144} height={55} />
-            </div>
+            </motion.div>
           ))}
-        </div>
-        <div className="grid lg:grid-cols-6 grid-cols-4 gap-10 justify-center container">
+        </motion.div>
+
+        {/* Desktop Second Row */}
+        <motion.div
+          className="hidden lg:grid lg:grid-cols-6 gap-10 justify-center w-full"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        >
           {logos.slice(4).map((logo, index) => (
-            <div
+            <motion.div
               key={index}
               className="w-[80px] h-[32px] md:w-[144px] md:h-[55px]"
+              variants={logoVariants}
             >
               <Image src={logo} alt="Company Logo" width={144} height={55} />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
+
+        {/* Mobile Layout */}
+        <motion.div
+          className="grid lg:hidden grid-cols-4 gap-10 w-full justify-items-center"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        >
+          {logos.slice(0, 4).map((logo, index) => (
+            <motion.div
+              key={index}
+              className="w-[80px] h-[32px] md:w-[144px] md:h-[55px]"
+              variants={logoVariants}
+            >
+              <Image src={logo} alt="Company Logo" width={144} height={55} />
+            </motion.div>
+          ))}
+
+          <motion.div
+            className="col-span-4 flex justify-center gap-10"
+            variants={containerVariants}
+          >
+            {logos.slice(4, 6).map((logo, index) => (
+              <motion.div
+                key={index}
+                className="w-[80px] h-[32px] md:w-[144px] md:h-[55px]"
+                variants={logoVariants}
+              >
+                <Image src={logo} alt="Company Logo" width={144} height={55} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

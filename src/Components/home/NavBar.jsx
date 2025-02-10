@@ -1,11 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import LogoSvg from "@/assets/svgs/LogoSvg";
 import { motion } from "framer-motion";
 
 const NavBar = () => {
+  const Navs = [
+    { bar: "Home", link: "/" },
+    { bar: "Solution", link: "/solution" },
+    { bar: "Projects", link: "/projects" },
+    { bar: "Jobs", link: "/jobs" },
+    { bar: "Blog", link: "/blog" },
+  ];
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
 
   return (
     <motion.nav
@@ -26,17 +45,15 @@ const NavBar = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          {["Home", "Solutions", "Projects", "Jobs", "Blog"].map(
-            (item, index) => (
-              <Link
-                key={index}
-                href="#"
-                className="text-lg font-medium hover:text-[#0B61EA] transition-colors"
-              >
-                {item}
-              </Link>
-            )
-          )}
+          {Navs.map((item, index) => (
+            <Link
+              key={index}
+              href={item.link}
+              className="text-lg font-medium hover:text-[#0B61EA] transition-colors"
+            >
+              {item.bar}
+            </Link>
+          ))}
         </motion.div>
 
         {/* Desktop Contact Button */}
@@ -83,18 +100,16 @@ const NavBar = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <div className="flex flex-col items-center pt-8 space-y-6">
-            {["Home", "Solutions", "Projects", "Jobs", "Blog"].map(
-              (item, index) => (
-                <Link
-                  key={index}
-                  href="#"
-                  className="text-2xl font-medium hover:text-[#0B61EA] transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item}
-                </Link>
-              )
-            )}
+            {Navs.map((item, index) => (
+              <Link
+                key={index}
+                href={item.link}
+                className="text-2xl font-medium hover:text-[#0B61EA] transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.bar}
+              </Link>
+            ))}
             <Link
               href="#"
               className="text-white font-medium bg-[#0B61EA] rounded-lg w-[190px] p-4 text-center hover:bg-blue-700 transition-colors"

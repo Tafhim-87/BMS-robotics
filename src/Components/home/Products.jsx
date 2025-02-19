@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import Arrow from "@/assets/svgs/Arrow";
 import PlusSvg from "@/assets/svgs/PlusSvg";
 import Link from "next/link";
@@ -8,6 +8,10 @@ import Image from "next/image";
 import img1 from "@/assets/imgs/hero/robo2.png";
 import img2 from "@/assets/imgs/hero/robo3.png";
 import "./style.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const products = [
   {
@@ -37,37 +41,29 @@ const products = [
 ];
 
 const Products = () => {
-  const scrollRef = useRef(null);
+  const [swiperInstance, setSwiperInstance] = useState(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Function to handle scrolling
+  // Function to handle scroll progress
   const handleScroll = () => {
-    const scrollContainer = scrollRef.current;
-    if (scrollContainer) {
-      const scrollLeft = scrollContainer.scrollLeft;
-      const maxScrollLeft =
-        scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      const scrollPercent = (scrollLeft / maxScrollLeft) * 100;
-      setScrollProgress(scrollPercent);
+    if (swiperInstance) {
+      const progress = (swiperInstance.progress * 100).toFixed(2);
+      setScrollProgress(progress);
     }
   };
 
   // Scroll Functions
   const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -400, behavior: "smooth" });
+    if (swiperInstance) {
+      swiperInstance.slidePrev();
+    }
   };
 
   const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (scrollContainer) {
-      scrollContainer.addEventListener("scroll", handleScroll);
-      return () => scrollContainer.removeEventListener("scroll", handleScroll);
+    if (swiperInstance) {
+      swiperInstance.slideNext();
     }
-  }, []);
+  };
 
   return (
     <section className="w-full flex justify-center">
@@ -95,28 +91,35 @@ const Products = () => {
           </div>
         </div>
 
-        {/* Products Section */}
-        <div
-          ref={scrollRef}
-          className="p-0 md:px-14 overflow-x-auto scrollbar-custom flex gap-10 scroll-smooth"
+        {/* Swiper Carousel */}
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          onSwiper={(swiper) => setSwiperInstance(swiper)}
+          onSlideChange={handleScroll}
+          className="w-full"
         >
-          <div className="flex gap-8 min-w-max">
-            {products.map((product, index) => (
-              <div key={index} className="text-center w-[394px]">
-                <div className="w-[394px] h-[440px] flex items-center justify-center bg-[#F5F6F8] rounded-md">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    width={440}
-                    height={350}
-                  />
-                </div>
-                <h1 className="text-3xl font-bold">{product.title}</h1>
-                <p className="text-xl font-medium">{product.description}</p>
+          {products.map((product, index) => (
+            <SwiperSlide key={index} className="text-center">
+              <div className="w-[394px] h-[440px] flex items-center justify-center bg-[#F5F6F8] rounded-md">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  width={440}
+                  height={350}
+                />
               </div>
-            ))}
-          </div>
-        </div>
+              <h1 className="text-3xl font-bold mt-4">{product.title}</h1>
+              <p className="text-xl font-medium">{product.description}</p>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
         {/* Scrollbar Navigation */}
         <div className="w-full flex justify-center md:justify-end items-center gap-3">

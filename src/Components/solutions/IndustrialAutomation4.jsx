@@ -5,8 +5,9 @@ import SettingIcn from "@/assets/svgs/solutionSvg/SettingIcn";
 import UpperSvg from "@/assets/svgs/solutionSvg/UpperSvg";
 import Arrow from "@/assets/svgs/Arrow";
 import "@/Components/home/style.css";
+import OrrengeSett from "@/assets/svgs/solutionSvg/OrrengeSett";
 
-const IndustrialAutomation = () => {
+const IndustrialAutomation4 = () => {
   const scrollRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -29,45 +30,45 @@ const IndustrialAutomation = () => {
   };
   const list = [
     {
-      title: "Customized Design",
+      title: "Tailored Software Design",
       description:
-        "Tailored robotics solutions to meet your unique operational needs.",
+        "Craft custom software solutions designed specifically for your robotics needs.",
     },
     {
-      title: "Smart Integration",
+      title: "Integration with Robotics",
       description:
-        "Connects seamlessly with IoT devices and AI for predictive maintenance and real-time analytics.",
+        "Integrate software with existing robotic hardware for seamless functionality.",
     },
     {
-      title: "Task Automation",
+      title: "User Interface Optimization",
       description:
-        "Automates repetitive tasks to improve productivity and safety.",
+        "Develop intuitive, easy-to-use interfaces for better user experience.",
     },
     {
-      title: "Scalable Solutions",
+      title: "Continuous Support ",
       description:
-        "Designed to grow with your business, ensuring long-term value.",
+        "Offer ongoing support and updates to ensure your systems remain cutting-edge.",
     },
   ];
 
   const product = [
     {
       img: img1,
-      title: "Industrial Product Name",
+      title: "Software Project Name",
       description:
-        "Our cutting-edge industrial automation solutions boost productivity, minimize downtime, and elevate precision. Clients are delighted by the rapidity and accuracy our innovations introduce to their manufacturing processes.",
+        "Our cutting-edge AI software solutions boost efficiency, minimize errors, and enhance precision. Developers are excited about the speed and accuracy our innovations bring to their coding projects.",
     },
     {
       img: img1,
-      title: "Industrial Product Name",
+      title: "Software Project Name",
       description:
-        "Our cutting-edge industrial automation solutions boost productivity, minimize downtime, and elevate precision. Clients are delighted by the rapidity and accuracy our innovations introduce to their manufacturing processes.",
+        "Our cutting-edge AI software solutions boost efficiency, minimize errors, and enhance precision. Developers are excited about the speed and accuracy our innovations bring to their coding projects.",
     },
     {
       img: img1,
-      title: "Industrial Product Name",
+      title: "Software Project Name",
       description:
-        "Our cutting-edge industrial automation solutions boost productivity, minimize downtime, and elevate precision. Clients are delighted by the rapidity and accuracy our innovations introduce to their manufacturing processes.",
+        "Our cutting-edge AI software solutions boost efficiency, minimize errors, and enhance precision. Developers are excited about the speed and accuracy our innovations bring to their coding projects.",
     },
   ];
 
@@ -76,39 +77,29 @@ const IndustrialAutomation = () => {
       <div className="container max-w-[1440px] flex flex-col gap-10">
         <h1 className="text-[22px] font-bold text-[#0B61EA] text-center flex flex-col justify-center items-center">
           <UpperSvg />
-          Industrial Automation
+          Software Development
         </h1>
         <div className="flex flex-col text-center">
           <h1 className="text-[40px] font-bold text-[#1D242D]">
-            Advanced Industrial Automation Solutions for Smarter Manufacturing
+            Custom Software Development for Robotics Solutions
           </h1>
           <p className="text-[20px] font-medium text-[#1D242D] mt-4">
-            Transform your production lines with our industrial automation
-            solutions. By integrating advanced robotics, IoT, and AI, we
-            optimize processes like assembly, material handling, and quality
-            control, boosting efficiency, reducing downtime, and lowering costs.
+            Develop custom software tailored to your robotics systems, enabling
+            seamless integration, automation, and user-friendly interfaces for
+            maximum efficiency and performance.
           </p>
         </div>
       </div>
 
       {/* Features Section */}
-      <div className="bg-[#EEF3FF] w-screen h-[544px] flex justify-center">
-        <div className="container max-w-[1440px] flex gap-32 py-10">
-          <div className="h-[450px] flex justify-start items-center">
-            <Image
-              src={img1}
-              alt="Industrial Automation"
-              width={690}
-              height={450}
-              className="h-[450px] object-cover"
-            />
-          </div>
-          <div className="flex flex-col gap-5 ">
+      <div className="bg-[#FDF6ED] w-screen h-[544px] flex justify-center">
+        <div className="container max-w-[1440px] flex gap-14 py-10">
+          <div className="flex flex-col gap-5 pl-4">
             {list.map((item, index) => (
               <div key={index} className="w-[540px] pr-8">
                 <div className="flex items-center gap-4">
-                  <SettingIcn />
-                  <h1 className="text-[22px] font-bold text-[#0B61EA]">
+                  <OrrengeSett />
+                  <h1 className="text-[22px] font-bold text-[#F48C06]">
                     {item.title}
                   </h1>
                 </div>
@@ -118,20 +109,21 @@ const IndustrialAutomation = () => {
               </div>
             ))}
           </div>
+          <div className="h-[450px] flex justify-end items-center w-full">
+            <Image
+              src={img1}
+              alt="Industrial Automation"
+              width={690}
+              height={450}
+              className="h-[450px] object-cover"
+            />
+          </div>
         </div>
       </div>
 
       {/* Products Section */}
-      <div className="w-screen bg-[#FDF6ED] flex justify-center">
+      <div className="w-screen bg-[#F6F9FF] flex justify-center">
         <div className="container max-w-[1440px] flex justify-start gap-10">
-          <div className="bg-[#ED8A11] max-w-[430px] text-center py-10 flex flex-col gap-4 px-4">
-            <h1 className="text-[32px] font-bold text-white">Our Automation</h1>
-            <p className="text-[20px] font-medium text-white">
-              Our industrial automation products enhance efficiency, reduce
-              downtime, and improve precision. Customers are thrilled with the
-              speed and accuracy our solutions bring to their production lines.
-            </p>
-          </div>
           {/*  */}
           <div className="flex flex-col gap-4 overflow-x-auto py-7">
             <div
@@ -171,7 +163,7 @@ const IndustrialAutomation = () => {
               {/* Custom Scroll Indicator */}
               <div className="w-[146px] h-3 rounded-full bg-[#B2BBC633] relative">
                 <div
-                  className="h-3 rounded-full bg-[#F48C06] absolute top-0 left-0 transition-all duration-300"
+                  className="h-3 rounded-full bg-[#0B61EA] absolute top-0 left-0 transition-all duration-300"
                   style={{ width: `${Math.max(scrollProgress, 5)}%` }}
                 ></div>
               </div>
@@ -184,10 +176,20 @@ const IndustrialAutomation = () => {
               </button>
             </div>
           </div>
+
+          {/*  */}
+          <div className="bg-[#0B61EA] max-w-[430px] text-center py-10 flex flex-col gap-4 px-4">
+            <h1 className="text-[32px] font-bold text-white">Our Softwares</h1>
+            <p className="text-[20px] font-medium text-white">
+              Our AI software solutions increase efficiency, reduce downtime,
+              and improve accuracy. Clients are thrilled with the swift and
+              precise performance our technology brings to their operations.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default IndustrialAutomation;
+export default IndustrialAutomation4;

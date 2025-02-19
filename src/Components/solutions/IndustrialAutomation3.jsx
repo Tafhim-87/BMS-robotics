@@ -6,7 +6,7 @@ import UpperSvg from "@/assets/svgs/solutionSvg/UpperSvg";
 import Arrow from "@/assets/svgs/Arrow";
 import "@/Components/home/style.css";
 
-const IndustrialAutomation = () => {
+const IndustrialAutomation3 = () => {
   const scrollRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -29,45 +29,44 @@ const IndustrialAutomation = () => {
   };
   const list = [
     {
-      title: "Customized Design",
+      title: "Device Connectivity",
       description:
-        "Tailored robotics solutions to meet your unique operational needs.",
+        "Seamlessly connect robots with IoT devices for real-time data exchange.",
     },
     {
-      title: "Smart Integration",
+      title: "Smart Analytics",
       description:
-        "Connects seamlessly with IoT devices and AI for predictive maintenance and real-time analytics.",
+        "Leverage IoT data for predictive maintenance and process optimization.",
     },
     {
-      title: "Task Automation",
+      title: "Remote Monitoring",
       description:
-        "Automates repetitive tasks to improve productivity and safety.",
+        "Control and monitor robots from anywhere for greater flexibility and control.",
     },
     {
-      title: "Scalable Solutions",
-      description:
-        "Designed to grow with your business, ensuring long-term value.",
+      title: "Scalable Infrastructure",
+      description: "Easily scale IoT-enabled robotics as your needs grow.",
     },
   ];
 
   const product = [
     {
       img: img1,
-      title: "Industrial Product Name",
+      title: "IOT Product Name",
       description:
-        "Our cutting-edge industrial automation solutions boost productivity, minimize downtime, and elevate precision. Clients are delighted by the rapidity and accuracy our innovations introduce to their manufacturing processes.",
+        "Our state-of-the-art IoT solutions enhance productivity, reduce downtime, and improve precision. Clients are thrilled with the speed and accuracy our innovations bring to their connected manufacturing environments.",
     },
     {
       img: img1,
-      title: "Industrial Product Name",
+      title: "IOT Product Name",
       description:
-        "Our cutting-edge industrial automation solutions boost productivity, minimize downtime, and elevate precision. Clients are delighted by the rapidity and accuracy our innovations introduce to their manufacturing processes.",
+        "Our state-of-the-art IoT solutions enhance productivity, reduce downtime, and improve precision. Clients are thrilled with the speed and accuracy our innovations bring to their connected manufacturing environments.",
     },
     {
       img: img1,
-      title: "Industrial Product Name",
+      title: "IOT Product Name",
       description:
-        "Our cutting-edge industrial automation solutions boost productivity, minimize downtime, and elevate precision. Clients are delighted by the rapidity and accuracy our innovations introduce to their manufacturing processes.",
+        "Our state-of-the-art IoT solutions enhance productivity, reduce downtime, and improve precision. Clients are thrilled with the speed and accuracy our innovations bring to their connected manufacturing environments.",
     },
   ];
 
@@ -76,17 +75,17 @@ const IndustrialAutomation = () => {
       <div className="container max-w-[1440px] flex flex-col gap-10">
         <h1 className="text-[22px] font-bold text-[#0B61EA] text-center flex flex-col justify-center items-center">
           <UpperSvg />
-          Industrial Automation
+          Internet Of Things
         </h1>
         <div className="flex flex-col text-center">
           <h1 className="text-[40px] font-bold text-[#1D242D]">
-            Advanced Industrial Automation Solutions for Smarter Manufacturing
+            Cutting-Edge IoT Solutions for Smart Automation
           </h1>
           <p className="text-[20px] font-medium text-[#1D242D] mt-4">
-            Transform your production lines with our industrial automation
-            solutions. By integrating advanced robotics, IoT, and AI, we
-            optimize processes like assembly, material handling, and quality
-            control, boosting efficiency, reducing downtime, and lowering costs.
+            Integrate robotics with IoT technology to enable real-time
+            monitoring, smart data collection, and seamless remote control,
+            enhancing operational efficiency and enabling smarter
+            decision-making.
           </p>
         </div>
       </div>
@@ -125,11 +124,14 @@ const IndustrialAutomation = () => {
       <div className="w-screen bg-[#FDF6ED] flex justify-center">
         <div className="container max-w-[1440px] flex justify-start gap-10">
           <div className="bg-[#ED8A11] max-w-[430px] text-center py-10 flex flex-col gap-4 px-4">
-            <h1 className="text-[32px] font-bold text-white">Our Automation</h1>
+            <h1 className="text-[32px] font-bold text-white">
+              Our IOT Solution
+            </h1>
             <p className="text-[20px] font-medium text-white">
-              Our industrial automation products enhance efficiency, reduce
-              downtime, and improve precision. Customers are thrilled with the
-              speed and accuracy our solutions bring to their production lines.
+              Our IoT solutions revolutionize industrial automation by boosting
+              efficiency, minimizing downtime, and enhancing precision. Clients
+              are delighted with the seamless connectivity and real-time data
+              insights our technology provides to their production lines.
             </p>
           </div>
           {/*  */}
@@ -190,4 +192,4 @@ const IndustrialAutomation = () => {
   );
 };
 
-export default IndustrialAutomation;
+export default IndustrialAutomation3;

@@ -2,7 +2,7 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <section className="w-full h-screen flex justify-center">
+    <section className="w-full h-screen flex justify-center overflow-hidden">
       <div className="container flex flex-col gap-[30px] md:gap-[60px] mt-10 md:mt-20 max-w-[1440px] px-4 animate-pulse">
         {/* Text Skeleton */}
         <div className="w-full flex flex-col gap-2 justify-center items-center text-center">

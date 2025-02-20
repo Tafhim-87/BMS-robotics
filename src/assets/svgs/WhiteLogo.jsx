@@ -23,6 +23,7 @@ const WhiteLogo = (props) => (
         id="b"
         width={2100}
         height={1500}
+        preserveAspectRatio="none"
       />
     </defs>
   </svg>

@@ -4,6 +4,8 @@ import WhiteLogo from "@/assets/svgs/WhiteLogo";
 import PhoneIcn from "@/assets/svgs/icons/PhoneIcn";
 import LocationIcn from "@/assets/svgs/icons/LocationIcn";
 import MailIcn from "@/assets/svgs/icons/MailIcn ";
+import Image from "next/image";
+import logo from "@/assets/imgs/hero/whiteLogo.png";
 
 const footerData = [
   {
@@ -51,7 +53,8 @@ export const Footer = () => {
     <section className="w-full bg-[#1D242D] text-white py-8 md:py-16 px-5 md:px-10 overflow-x-hidden">
       <div className="container max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-          <WhiteLogo /> <div className="w-full bg-[#546881]/70 h-0.5"></div>
+          <Image src={logo} alt="logo" width={100} height={100} />{" "}
+          <div className="w-full bg-[#546881]/70 h-0.5"></div>
         </div>
         <div className="flex flex-wrap justify-between gap-8 mt-16">
           {footerData.map((section, index) => (

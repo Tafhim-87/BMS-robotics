@@ -56,6 +56,18 @@ const Page = () => {
     };
   }, [isLoading]);
 
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isLoading]);
+
   if (isLoading) return <Loading />;
 
   return (

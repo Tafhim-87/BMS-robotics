@@ -35,7 +35,7 @@ const ConnectForm = () => {
               </label>
               <input
                 {...register("firstName", { required: true })}
-                className="w-full p-2 text-sm sm:text-base border rounded mt-1"
+                className="w-full py-3 px-4 border rounded-lg mt-1"
                 placeholder="First name"
               />
               {errors.firstName && (
@@ -48,7 +48,7 @@ const ConnectForm = () => {
               </label>
               <input
                 {...register("lastName", { required: true })}
-                className="w-full p-2 text-sm sm:text-base border rounded mt-1"
+                className="w-full py-3 px-4 border rounded-lg mt-1"
                 placeholder="Last name"
               />
               {errors.lastName && (
@@ -64,7 +64,7 @@ const ConnectForm = () => {
               </label>
               <input
                 {...register("email", { required: true })}
-                className="w-full p-2 text-sm sm:text-base border rounded mt-1"
+                className="w-full py-3 px-4 border rounded-lg mt-1"
                 placeholder="you@company.com"
               />
               {errors.email && (
@@ -78,7 +78,7 @@ const ConnectForm = () => {
               </label>
               <input
                 {...register("phone", { required: true })}
-                className="w-full p-2 text-sm sm:text-base border rounded mt-1"
+                className="w-full py-3 px-4 border rounded-lg mt-1"
                 placeholder="+1 (555) 000-0000"
                 type="tel"
               />
@@ -94,7 +94,7 @@ const ConnectForm = () => {
             </label>
             <input
               {...register("companyName")}
-              className="w-full p-2 text-sm sm:text-base border rounded mt-1"
+              className="w-full py-3 px-4 border rounded-lg mt-1"
               placeholder="Company Name"
             />
           </div>
@@ -105,7 +105,7 @@ const ConnectForm = () => {
             </label>
             <select
               {...register("country")}
-              className="w-full p-2 text-sm sm:text-base border rounded mt-1"
+              className="w-full py-3 px-4 border rounded-lg mt-1"
             >
               <option value="">Select Country</option>
               <option value="USA">USA</option>
@@ -119,7 +119,7 @@ const ConnectForm = () => {
             </label>
             <select
               {...register("category")}
-              className="w-full p-2 text-sm sm:text-base border rounded mt-1"
+              className="w-full py-3 px-4 border rounded-lg mt-1"
             >
               <option value="">Select Category</option>
               <option value="Support">Support</option>
@@ -133,7 +133,7 @@ const ConnectForm = () => {
             </label>
             <textarea
               {...register("message")}
-              className="w-full p-2 text-sm sm:text-base border rounded mt-1"
+              className="w-full py-3 px-4 border rounded-lg mt-1"
               rows="4"
             ></textarea>
           </div>

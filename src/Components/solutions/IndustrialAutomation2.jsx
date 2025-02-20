@@ -19,15 +19,18 @@ const IndustrialAutomation2 = () => {
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -1000, behavior: "smooth" });
+      const cardWidth = scrollRef.current.children[0].offsetWidth;
+      scrollRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 1000, behavior: "smooth" });
+      const cardWidth = scrollRef.current.children[0].offsetWidth;
+      scrollRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
     }
   };
+
   const list = [
     {
       title: "AI Integration",
@@ -42,7 +45,7 @@ const IndustrialAutomation2 = () => {
     {
       title: "Task Adaptation",
       description:
-        "Automates repetitive tAllow robots to autonomously adapt to varying tasks and environments.asks to improve productivity and safety.",
+        "Allow robots to autonomously adapt to varying tasks and environments.",
     },
     {
       title: "Continuous Optimization",
@@ -74,49 +77,58 @@ const IndustrialAutomation2 = () => {
 
   return (
     <section className="w-full flex flex-col justify-center items-center gap-8">
-      <div className="container max-w-[1440px] flex flex-col gap-10">
-        <h1 className="text-[22px] font-bold text-[#0B61EA] text-center flex flex-col justify-center items-center">
+      <div className="container max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col gap-6 md:gap-10">
+        <h1 className="text-lg md:text-xl font-bold text-[#0B61EA] text-center flex flex-col justify-center items-center">
           <UpperSvg />
           AI-Powered Robotics
         </h1>
         <div className="flex flex-col text-center">
-          <h1 className="text-[40px] font-bold text-[#1D242D]">
+          <h1 className="text-2xl md:text-4xl font-bold text-[#1D242D]">
             AI-powered Robotics for Smarter Automation
           </h1>
-          <p className="text-[20px] font-medium text-[#1D242D] mt-4">
+          <p className="text-base md:text-lg font-medium text-[#1D242D] mt-3 md:mt-4">
             Leverage artificial intelligence to create adaptive, intelligent
             robots that can learn from their environment, make decisions in
             real-time, and optimize tasks for enhanced productivity and
-            precision
+            precision.
           </p>
         </div>
       </div>
 
       {/* Features Section */}
-      <div className="bg-[#FDF6ED] w-screen h-[544px] flex justify-center">
-        <div className="container max-w-[1440px] flex gap-14 py-10">
-          <div className="flex flex-col gap-5 pl-4">
-            {list.map((item, index) => (
-              <div key={index} className="w-[540px] pr-8">
-                <div className="flex items-center gap-4">
-                  <OrrengeSett />
-                  <h1 className="text-[22px] font-bold text-[#F48C06]">
-                    {item.title}
-                  </h1>
-                </div>
-                <p className="text-[20px] font-medium text-[#1D242D] ml-12 leading-[25px]">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="h-[450px] flex justify-end items-center w-full">
+      <div className="bg-[#FDF6ED] w-screen flex justify-center">
+        <div className="container max-w-[1440px] flex flex-col lg:flex-row gap-10 lg:gap-28 py-5 lg:py-10">
+          <div className="lg:h-[450px] h-auto lg:hidden flex justify-center items-center">
             <Image
               src={img1}
               alt="Industrial Automation"
               width={690}
               height={450}
-              className="h-[450px] object-cover"
+              className="lg:h-[450px] h-auto w-full object-cover"
+            />
+          </div>
+          <div className="flex flex-col gap-5 px-5">
+            {list.map((item, index) => (
+              <div key={index} className="w-full md:w-[540px] pr-4 md:pr-8">
+                <div className="flex items-center gap-3 md:gap-4">
+                  <OrrengeSett />
+                  <h1 className="text-lg md:text-xl font-bold text-[#F48C06]">
+                    {item.title}
+                  </h1>
+                </div>
+                <p className="text-base md:text-lg font-medium text-[#1D242D] ml-0 md:ml-12 leading-[22px] md:leading-[25px]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="lg:h-[450px] h-auto hidden lg:flex justify-center items-center">
+            <Image
+              src={img1}
+              alt="Industrial Automation"
+              width={690}
+              height={450}
+              className="lg:h-[450px] h-auto w-full object-cover"
             />
           </div>
         </div>
@@ -124,34 +136,49 @@ const IndustrialAutomation2 = () => {
 
       {/* Products Section */}
       <div className="w-screen bg-[#F6F9FF] flex justify-center">
-        <div className="container max-w-[1440px] flex justify-start gap-10">
+        <div className="container max-w-[1440px] flex flex-col lg:flex-row justify-start gap-10">
+          <div className="bg-[#0B61EA] lg:max-w-[430px] w-full text-center py-10 flex flex-col gap-4 px-4">
+            <h1 className="text-[32px] font-bold text-white">
+              Our AI Robotics
+            </h1>
+            <p className="text-[20px] font-medium text-white">
+              Our AI robotics solutions boost productivity, minimize
+              interruptions, and enhance precision. Clients are delighted with
+              the rapid and precise performance our technology delivers to their
+              operations.
+            </p>
+          </div>
           {/*  */}
           <div className="flex flex-col gap-4 overflow-x-auto py-7">
             <div
               ref={scrollRef}
               onScroll={handleScroll}
-              className="flex gap-20 overflow-x-auto scrollbar-hide scroll-smooth scrollbar-custom"
+              className="flex gap-10 sm:gap-16 md:gap-20 overflow-x-auto scrollbar-hide scroll-smooth scrollbar-custom"
             >
               {product.map((item, index) => (
-                <div key={index} className="flex gap-10 min-w-[900px]">
+                <div
+                  key={index}
+                  className="flex flex-col lg:flex-row gap-6 sm:gap-10 min-w-full md:min-w-[900px]"
+                >
                   <Image
                     src={item.img}
                     alt="Industrial Automation"
-                    width={424}
-                    height={244}
-                    className="h-[244px] object-cover"
+                    width={320}
+                    height={180}
+                    className="w-full lg:max-w-[320px] object-cover flex justify-center items-center bg-red-300"
                   />
-                  <div className="text-start">
-                    <h1 className="text-[32px] font-bold text-[#1D242D]">
+                  <div className="lg:text-start text-center flex flex-col justify-center items-center lg:px-0 px-4">
+                    <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1D242D]">
                       {item.title}
                     </h1>
-                    <p className="text-[20px] max-w-[436px]">
+                    <p className="text-base sm:text-lg w-full md:max-w-[436px] lg:text-start text-center">
                       {item.description}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
+
             {/* Scrollbar Navigation */}
             <div className="w-full flex justify-center items-center gap-3 mt-4">
               <button
@@ -176,19 +203,6 @@ const IndustrialAutomation2 = () => {
                 <Arrow color={"#909DAD"} />
               </button>
             </div>
-          </div>
-
-          {/*  */}
-          <div className="bg-[#0B61EA] max-w-[430px] text-center py-10 flex flex-col gap-4 px-4">
-            <h1 className="text-[32px] font-bold text-white">
-              Our AI Robotics
-            </h1>
-            <p className="text-[20px] font-medium text-white">
-              Our AI robotics solutions boost productivity, minimize
-              interruptions, and enhance precision. Clients are delighted with
-              the rapid and precise performance our technology delivers to their
-              operations.
-            </p>
           </div>
         </div>
       </div>

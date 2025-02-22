@@ -1,11 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import img1 from "@/assets/imgs/solution/hero.png";
+import Bg from "@/assets/imgs/hero/gridBg.jpeg";
 
 const SolutionsHero = () => {
   return (
-    <div className="w-full flex justify-center items-center">
-      <div className="container max-w-[1440px] flex flex-col">
+    <section className="w-full flex justify-center items-center relative">
+      <Image
+        src={Bg}
+        alt=""
+        width={1440}
+        height={800}
+        className="absolute inset-0 top-0 left-0 w-full h-full"
+      />
+      <div className="container max-w-[1440px] flex flex-col z-10">
         <div className="flex flex-col gap-5 px-4 sm:px-8 md:px-16 text-center md:text-start">
           <div className="flex flex-col gap-5 sm:gap-[27px] max-w-full md:max-w-[753px]">
             <h1 className="text-[#1D242D] text-2xl sm:text-4xl md:text-[52px] leading-tight sm:leading-[45px] md:leading-[57px] font-bold">
@@ -104,7 +112,7 @@ const SolutionsHero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

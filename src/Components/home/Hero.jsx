@@ -7,6 +7,7 @@ import ImageCarousel from "./ImageCarousel";
 import Image from "next/image";
 import img1 from "@/assets/imgs/hero/VectorImg.png";
 import { motion } from "framer-motion";
+import Bg from "@/assets/imgs/hero/gridBg.jpeg";
 
 const images = ["/image1.png", "/image2.png", "/image3.png"]; // Replace with your image paths
 
@@ -22,8 +23,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full flex justify-center">
-      <div className="container flex flex-col gap-[30px] md:gap-[60px] mt-10 md:mt-20 max-w-[1440px] px-4">
+    <section className="w-full flex justify-center relative">
+      <Image
+        src={Bg}
+        alt=""
+        width={1440}
+        height={800}
+        className="absolute inset-0 top-0 left-0 w-full h-full"
+      />
+      ;
+      <div className="container flex flex-col gap-[30px] md:gap-[60px] mt-10 md:mt-20 z-10 max-w-[1440px] px-4">
         {/* Text Content */}
         <motion.div
           className="text-center w-full flex flex-col gap-2 justify-center items-center"

@@ -22,41 +22,60 @@ const Support = () => {
     },
   ];
   return (
-    <section className="w-full flex items-center justify-center">
-      <div className="container flex flex-col items-center justify-center max-w-[1440px] px-10">
-        <div className="w-[1264px] h-[330px] bg-gradient-to-br from-[#293241] to-[#003081] text-[#ffffff] p-14">
-          <div className="w-[500px] flex flex-col gap-8">
-            <h1 className="text-5xl font-bold">
+    <section className="w-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="container flex flex-col items-center justify-center max-w-[1440px]">
+        {/* Gradient Section */}
+        <div className="w-full max-w-[1264px] bg-gradient-to-br from-[#293241] to-[#003081] text-white p-6 md:p-14 rounded-xl">
+          <div className="w-full max-w-[500px] flex flex-col gap-4 md:gap-8">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
               We have best team and best process
             </h1>
-            <p className="text-[22px] leading-[32px]">
+            <p className="text-base md:text-lg lg:text-[22px] lg:leading-[32px]">
               Our team and processes are the best, delivering unmatched results
               every time
             </p>
           </div>
         </div>
-        <div className="flex ">
-          <div className="grid grid-cols-2 top-[-30px] right-[-30px] gap-[30px] mt-[70px] justify-start w-[778px]">
-            {/* cards */}
+
+        {/* Cards & Image Section */}
+        <div className="flex flex-col lg:flex-row w-full max-w-[1264px] gap-6 mt-8 md:mt-14">
+          {/* Cards Grid */}
+          <div className="w-full lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {cardData.map((card, index) => (
               <div
                 key={index}
-                className="border-[2px] border-solid border-[#B2BBC6] rounded-[20px] p-[25px] flex flex-col gap-[10px] shadow-[-10px_-10px_0px_rgb(229,233,238)]"
+                className="border-2 border-solid border-[#B2BBC6] rounded-xl p-4 md:p-6 flex flex-col gap-2 shadow-[-5px_-5px_0px_rgb(229,233,238)] md:shadow-[-10px_-10px_0px_rgb(229,233,238)]"
               >
-                <h1 className="text-2xl font-bold">{card.title}</h1>
-                <p>{card.description}</p>
+                <h1 className="text-xl md:text-2xl font-bold">{card.title}</h1>
+                <p className="text-sm md:text-base">{card.description}</p>
               </div>
             ))}
-            {/* Lat’s Talk Togather */}
-            <div className="relative">
-              <Image src={img2} alt="Support" width={374} height={232} />
-              <button className="flex bg-[#ffffff] text-[#0B61EA] py-2 px-4 rounded-[10px] absolute top-[50%] right-[50%] translate-x-[50%] translate-y-[-50%]">
-                Lat’s Talk Togather <Arrow />
+
+            {/* Let's Talk Button */}
+            <div className="relative w-full h-48 md:h-56">
+              <Image
+                src={img2}
+                alt="Support"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+              />
+              <button className="flex items-center bg-white text-[#0B61EA] py-2 px-4 rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+                Lat’s Talk Together <Arrow className="ml-2" />
               </button>
             </div>
           </div>
-          <div className="mt-[-120px]">
-            <Image src={img1} alt="Support" width={412} height={330} />
+
+          {/* Right Image */}
+          <div className="w-full lg:w-[40%] mt-4 lg:mt-[-120px] lg:mb-[-120px]">
+            <Image
+              src={img1}
+              alt="Support"
+              layout="responsive"
+              width={412}
+              height={330}
+              className="rounded-xl hidden lg:block"
+            />
           </div>
         </div>
       </div>

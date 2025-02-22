@@ -29,7 +29,7 @@ const Hero = () => {
         alt=""
         width={1440}
         height={800}
-        className="absolute inset-0 top-0 left-0 w-full h-full"
+        className="absolute inset-0 top-[-40px] md:top-0 left-0 w-full h-full"
       />
       ;
       <div className="container flex flex-col gap-[30px] md:gap-[60px] mt-10 md:mt-20 z-10 max-w-[1440px] px-4">

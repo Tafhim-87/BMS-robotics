@@ -5,6 +5,7 @@ import Loading from "@/Components/home/Loading";
 import { BlogCard } from "@/Components/blog/recentBlogs/BlogCard";
 import AllBlogCard from "@/Components/blog/allBlogs/AllBlogCard";
 import blogs from "@/Components/blog/data/blogs"; // Import the blogs array
+import BlogHero from "@/Components/blog/BlogHero";
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -66,7 +67,8 @@ const Page = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="font-Urbanist flex flex-col items-center md:px-10 px-5 justify-center gap-16 overflow-x-hidden">
+    <div className="font-Urbanist flex flex-col items-center  justify-center gap-16 overflow-x-hidden">
+      <BlogHero />
       <BlogCard />
       <AllBlogCard blogs={blogs} />
     </div>

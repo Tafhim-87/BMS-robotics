@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion"; // Import Framer Motion
 import img1 from "@/assets/imgs/solution/indAutomation.png";
 import SettingIcn from "@/assets/svgs/solutionSvg/SettingIcn";
 import UpperSvg from "@/assets/svgs/solutionSvg/UpperSvg";
@@ -74,9 +75,32 @@ const IndustrialAutomation = () => {
     },
   ];
 
+  // Animation Variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+  };
+
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     <section className="w-full flex flex-col justify-center items-center gap-8">
-      <div className="container max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col gap-6 md:gap-10">
+      {/* Header Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        viewport={{ once: true, amount: 0.5 }}
+        className="container max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col gap-6 md:gap-10"
+      >
         <h1 className="text-lg md:text-xl font-bold text-[#0B61EA] text-center flex flex-col justify-center items-center">
           <UpperSvg />
           Industrial Automation
@@ -92,11 +116,17 @@ const IndustrialAutomation = () => {
             control, boosting efficiency, reducing downtime, and lowering costs.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Features Section */}
       <div className="bg-[#EEF3FF] w-screen flex justify-center">
-        <div className="container max-w-[1440px] flex flex-col lg:flex-row gap-10 lg:gap-32 py-5 lg:py-10">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInUp}
+          viewport={{ once: true, amount: 0.5 }}
+          className="container max-w-[1440px] flex flex-col lg:flex-row gap-10 lg:gap-32 py-5 lg:py-10"
+        >
           <div className="lg:h-[450px] h-auto flex justify-start items-center">
             <Image
               src={img1}
@@ -108,7 +138,14 @@ const IndustrialAutomation = () => {
           </div>
           <div className="flex flex-col gap-5 px-5 lg:px-0">
             {list.map((item, index) => (
-              <div key={index} className="w-full md:w-[540px] pr-4 md:pr-8">
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInLeft}
+                viewport={{ once: true, amount: 0.5 }}
+                className="w-full md:w-[540px] pr-4 md:pr-8"
+              >
                 <div className="flex items-center gap-3 md:gap-4">
                   <SettingIcn />
                   <h1 className="text-lg md:text-xl font-bold text-[#0B61EA]">
@@ -118,33 +155,56 @@ const IndustrialAutomation = () => {
                 <p className="text-base md:text-lg font-medium text-[#1D242D] ml-0 md:ml-12 leading-[22px] md:leading-[25px]">
                   {item.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Products Section */}
       <div className="w-screen bg-[#FDF6ED] flex justify-center">
-        <div className="container max-w-[1440px] flex flex-col lg:flex-row justify-start gap-10">
-          <div className="bg-[#ED8A11] lg:max-w-[430px] w-full text-center py-10 flex flex-col gap-4 px-4">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInUp}
+          viewport={{ once: true, amount: 0.5 }}
+          className="container max-w-[1440px] flex flex-col lg:flex-row justify-start gap-10"
+        >
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInLeft}
+            viewport={{ once: true, amount: 0.5 }}
+            className="bg-[#ED8A11] lg:max-w-[430px] w-full text-center py-10 flex flex-col gap-4 px-4"
+          >
             <h1 className="text-[32px] font-bold text-white">Our Automation</h1>
             <p className="text-[20px] font-medium text-white">
               Our industrial automation products enhance efficiency, reduce
               downtime, and improve precision. Customers are thrilled with the
               speed and accuracy our solutions bring to their production lines.
             </p>
-          </div>
-          {/*  */}
-          <div className="flex flex-col gap-4 overflow-x-auto py-7">
+          </motion.div>
+
+          {/* Scrollable Products */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInRight}
+            viewport={{ once: true, amount: 0.5 }}
+            className="flex flex-col gap-4 overflow-x-auto py-7"
+          >
             <div
               ref={scrollRef}
               onScroll={handleScroll}
               className="flex gap-10 sm:gap-16 md:gap-20 overflow-x-auto scrollbar-hide scroll-smooth scrollbar-custom"
             >
               {product.map((item, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  variants={fadeInUp}
+                  viewport={{ once: true, amount: 0.5 }}
                   className="flex flex-col lg:flex-row gap-6 sm:gap-10 min-w-full md:min-w-[900px]"
                 >
                   <Image
@@ -152,7 +212,7 @@ const IndustrialAutomation = () => {
                     alt="Industrial Automation"
                     width={320}
                     height={180}
-                    className=" w-full lg:max-w-[320px] object-cover flex justify-center items-center bg-red-300"
+                    className="w-full lg:max-w-[320px] object-cover flex justify-center items-center bg-red-300"
                   />
                   <div className="lg:text-start text-center flex flex-col justify-center items-center lg:px-0 px-4">
                     <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1D242D]">
@@ -162,7 +222,7 @@ const IndustrialAutomation = () => {
                       {item.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -190,8 +250,8 @@ const IndustrialAutomation = () => {
                 <Arrow color={"#909DAD"} />
               </button>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

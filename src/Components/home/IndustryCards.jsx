@@ -5,6 +5,7 @@ import img1 from "@/assets/imgs/hero/industry1.jpg";
 import img2 from "@/assets/imgs/hero/robo-img3.jpg";
 import img3 from "@/assets/imgs/hero/vector1.png";
 import img4 from "@/assets/imgs/hero/vector2.png";
+import img5 from "@/assets/imgs/hero/icon3.png";
 
 const industries = [
   {
@@ -57,8 +58,9 @@ export default function IndustryCards() {
           visible: { transition: { staggerChildren: 0.2 } },
           hidden: {},
         }}
-        className="text-center mb-10 container max-w-[1440px] px-10"
+        className="text-center mb-10 container max-w-[1440px] px-10 flex flex-col items-center"
       >
+        {/* <Image src={img5} alt="" width={240} height={240} className="mb-4" /> */}
         <motion.h3
           variants={{
             hidden: { opacity: 0, y: 20 },

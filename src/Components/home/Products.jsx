@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import img1 from "@/assets/imgs/hero/robo2.png";
 import img2 from "@/assets/imgs/hero/robo3.png";
+import img3 from "@/assets/imgs/hero/icon2.png";
 import "./style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -72,8 +73,9 @@ const Products = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="relative flex flex-col gap-3">
             <div className="flex flex-col items-start">
-              <PlusSvg className="absolute top-[-30px] left-[-30px]" />
-              <h3 className="text-[22px] font-bold text-[#0B61EA]">
+              <PlusSvg className="absolute top-[-30px] left-[-15px] md:left-[-30px]" />
+              <h3 className="text-[22px] font-bold text-[#0B61EA] flex items-center gap-2">
+                <Image src={img3} alt="" width={24} height={24} />
                 Popular Products
               </h3>
             </div>

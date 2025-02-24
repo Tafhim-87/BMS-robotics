@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import img1 from "@/assets/imgs/hero/robo-img1.jpg";
 import img2 from "@/assets/imgs/hero/robo-img2.jpg";
 import img3 from "@/assets/imgs/hero/robo-img3.jpg";
+import img4 from "@/assets/imgs/hero/icon1.png";
 import PlusSvg from "@/assets/svgs/PlusSvg";
 
 const cardData = [
@@ -65,8 +66,9 @@ const Optimize = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col items-start">
-            <PlusSvg className="absolute top-[-30px] left-[-30px]" />
+          <div className="flex gap-2 items-start">
+            <PlusSvg className="absolute top-[-30px] left-[-15px] md:left-[-30px]" />
+            <Image src={img4} alt="" width={24} height={24} />
             <h3 className="text-[22px] font-bold text-[#0B61EA]">
               Modern Solutions
             </h3>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import Image from "next/image";
+import img from "@/assets/imgs/hero/icon3.png";
 
 const ConnectForm = () => {
   const {
@@ -16,7 +18,8 @@ const ConnectForm = () => {
   return (
     <div className="w-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-4xl">
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center">
+          <Image src={img} alt="" width={240} height={240} className="mb-4" />
           <h3 className="text-[#EC0E0E] font-bold text-lg sm:text-[22px]">
             Call Us Now
           </h3>

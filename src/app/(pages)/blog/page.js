@@ -67,7 +67,7 @@ const Page = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="font-Urbanist flex flex-col items-center  justify-center gap-16 overflow-x-hidden">
+    <div className="font-Urbanist flex flex-col items-center justify-center gap-16 overflow-x-hidden">
       <BlogHero />
       <BlogCard />
       <AllBlogCard blogs={blogs} />

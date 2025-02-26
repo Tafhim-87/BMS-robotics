@@ -50,7 +50,7 @@ const footerData = [
 
 export const Footer = () => {
   return (
-    <section className="w-full bg-[#1D242D] text-white py-8 md:py-16 px-5 md:px-10 overflow-x-hidden">
+    <footer className="w-full mt-8 bg-[#1D242D] text-white py-8 md:py-16 px-5 md:px-10 overflow-x-hidden">
       <div className="container max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-10">
           <Image src={logo} alt="logo" width={100} height={100} />{" "}
@@ -85,6 +85,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };

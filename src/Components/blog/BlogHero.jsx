@@ -13,7 +13,7 @@ const BlogHero = () => {
         width={1440}
         height={800}
       />
-      <div className="container flex flex-col justify-center items-center text-center px-4">
+      <div className="container flex flex-col justify-center items-center text-center px-4 z-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-tight md:leading-[62px] font-bold">
           Find Your Next Read
         </h1>

@@ -39,7 +39,7 @@ const AllBlogCard = ({ blogs = [] }) => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex items-center justify-center mb-6">
       <div className="container flex flex-col gap-5 max-w-[1440px] px-2 md:px-24">
         {/* Title */}
         <h1 className="text-xl sm:text-2xl font-bold">All Blogs</h1>
@@ -86,7 +86,7 @@ const AllBlogCard = ({ blogs = [] }) => {
                   {/* Read More Button */}
                   <Link href={`/blog/${blog.id}`} passHref>
                     <button className="font-semibold text-base sm:text-lg">
-                      Read More
+                      Read More {">>"}
                     </button>
                   </Link>
                 </div>

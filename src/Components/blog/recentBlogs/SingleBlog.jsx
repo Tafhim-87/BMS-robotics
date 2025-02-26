@@ -17,7 +17,7 @@ const blogs = [
 const SingleBlog = () => {
   return (
     <section className="w-full flex items-center justify-center">
-      <div className="container max-w-[1440px] flex flex-col gap-10">
+      <div className="container max-w-[1440px] flex flex-col items-center justify-center gap-10">
         {blogs.map((blog) => (
           <div key={blog.id} className="max-w-[586px] flex flex-col gap-[10px]">
             <div>
@@ -37,7 +37,9 @@ const SingleBlog = () => {
               </div>
               <p className="text-[#546881]">{blog.description}</p>
               <Link href={`/blog/${blog.id}`} passHref>
-                <button className="font-semibold text-lg">Read More</button>
+                <button className="font-semibold text-lg">
+                  Read More {">>"}
+                </button>
               </Link>
             </div>
           </div>

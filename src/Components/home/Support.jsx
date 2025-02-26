@@ -44,7 +44,8 @@ const Support = () => {
             {cardData.map((card, index) => (
               <div
                 key={index}
-                className="border-2 border-solid border-[#B2BBC6] rounded-xl p-4 md:p-6 flex flex-col gap-2 shadow-[-5px_-5px_0px_rgb(229,233,238)] md:shadow-[-10px_-10px_0px_rgb(229,233,238)]"
+                className="border-2 border-solid border-[#B2BBC6] rounded-xl p-4 md:p-6 flex flex-col gap-2 
+                         hover:transform hover:-translate-y-1 hover:translate-x-1 transition-transform duration-300 ease-in-out"
               >
                 <h1 className="text-xl md:text-2xl font-bold">{card.title}</h1>
                 <p className="text-sm md:text-base">{card.description}</p>

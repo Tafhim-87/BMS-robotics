@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { debounce } from "lodash";
+import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
 import blogs from "@/Components/blog/data/blogs";
 import SearchIcn from "@/assets/svgs/SearchIcn";
 import Link from "next/link";
@@ -27,6 +28,23 @@ const BlogSearch = () => {
     debouncedSearch(searchTerm, selectedCategory);
   }, [searchTerm, selectedCategory]);
 
+  // Animation variants for categories
+  const categoryVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
+
+  // Animation variants for blog list
+  const blogListVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+  };
+
+  const blogItemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="w-full flex flex-col items-center p-4 sm:p-6">
       {/* Search Bar */}
@@ -48,44 +66,56 @@ const BlogSearch = () => {
       </div>
 
       {/* Categories */}
-      <div className="flex flex-wrap gap-2 sm:gap-4 mt-4 sm:mt-6 justify-center">
-        <button
+      <motion.div
+        className="flex flex-wrap gap-2 sm:gap-4 mt-4 sm:mt-6 justify-center"
+        variants={blogListVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.button
           onClick={() => setSelectedCategory("")}
           className={`px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-bold bg-white text-blue-600 text-sm sm:text-base border border-gray-300 ${
             selectedCategory === "" ? "bg-[#9abdfd]" : "hover:bg-gray-100"
           } transition-colors`}
+          variants={categoryVariants}
         >
           All Categories
-        </button>
+        </motion.button>
         {categories.map((category, index) => (
-          <button
+          <motion.button
             key={index}
-            className={`px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-bold bg-white text-blue-600 text-sm sm:text-base border border-gray-300 ${
+            className={`px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-bold text-blue-600 text-sm sm:text-base border border-gray-300 ${
               selectedCategory === category
-                ? "bg-[#9abdfd]"
-                : "hover:bg-gray-100"
+                ? "bg-[#bcd4ff]"
+                : "hover:bg-gray-100  bg-white"
             } transition-colors`}
             onClick={() =>
               setSelectedCategory(selectedCategory === category ? "" : category)
             }
+            variants={categoryVariants}
           >
             {category}
-          </button>
+          </motion.button>
         ))}
-      </div>
+      </motion.div>
 
       {/* Blog List */}
-      {(searchTerm || selectedCategory) && (
-        <div className="w-full bg-white rounded-md mt-4 p-5">
-          <div className="mt-6 w-full max-w-4xl">
-            {filteredBlogs.length > 0 ? (
-              filteredBlogs.slice(0, 5).map(
-                (
-                  blog // Limit to 5 blogs
-                ) => (
-                  <div
+      <AnimatePresence>
+        {(searchTerm || selectedCategory) && (
+          <motion.div
+            className="w-full bg-white rounded-md mt-4 p-5"
+            variants={blogListVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <div className="mt-6 w-full max-w-4xl">
+              {filteredBlogs.length > 0 ? (
+                filteredBlogs.slice(0, 5).map((blog) => (
+                  <motion.div
                     key={blog.id}
                     className="p-4 bg-slate-100 rounded-lg shadow mb-4"
+                    variants={blogItemVariants}
                   >
                     <Link
                       href={`/blog/${blog.id}`}
@@ -94,17 +124,20 @@ const BlogSearch = () => {
                     >
                       {blog.title}
                     </Link>
-                  </div>
-                )
-              )
-            ) : (
-              <p className="text-gray-500 text-center mt-6">
-                No blogs found. Try a different search term or category.
-              </p>
-            )}
-          </div>
-        </div>
-      )}
+                  </motion.div>
+                ))
+              ) : (
+                <motion.p
+                  className="text-gray-500 text-center mt-6"
+                  variants={blogItemVariants}
+                >
+                  No blogs found. Try a different search term or category.
+                </motion.p>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

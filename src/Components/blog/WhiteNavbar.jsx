@@ -31,7 +31,7 @@ const WhiteNavbaar = () => {
 
   return (
     <motion.nav
-      className="w-full h-[112px] flex items-center justify-center overflow-x-hidden relative"
+      className="w-full h-[112px] flex items-center justify-center overflow-hidden relative"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -79,7 +79,7 @@ const WhiteNavbaar = () => {
 
         {/* Mobile Hamburger Button */}
         <button
-          className="lg:hidden flex flex-col space-y-2 p-4"
+          className="lg:hidden flex flex-col space-y-2 p-4 "
           onClick={() => setIsOpen(!isOpen)}
         >
           <motion.span
@@ -111,10 +111,8 @@ const WhiteNavbaar = () => {
               <Link
                 key={index}
                 href={item.link}
-                className={`text-2xl text-black font-medium transition-colors ${
-                  pathname === item.link
-                    ? "text-[#0B61EA] font-bold"
-                    : "hover:text-[#0B61EA]"
+                className={`text-2xl text-black transition-colors ${
+                  pathname === item.link ? "font-bold" : "hover:text-[#0B61EA]"
                 }`}
                 onClick={() => setIsOpen(false)}
               >

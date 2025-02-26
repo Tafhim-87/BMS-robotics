@@ -30,7 +30,7 @@ const NavBar = () => {
 
   return (
     <motion.nav
-      className="w-full h-[112px] flex items-center justify-center overflow-x-hidden relative"
+      className="w-full h-[112px] flex items-center justify-center overflow-hidden relative"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -110,10 +110,8 @@ const NavBar = () => {
               <Link
                 key={index}
                 href={item.link}
-                className={`text-2xl font-medium transition-colors ${
-                  pathname === item.link
-                    ? "text-[#000000] font-bold"
-                    : "hover:text-[#0B61EA]"
+                className={`text-2xl text-[#000000] transition-colors ${
+                  pathname === item.link ? "font-bold" : "hover:text-[#0B61EA]"
                 }`}
                 onClick={() => setIsOpen(false)}
               >

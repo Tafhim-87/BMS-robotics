@@ -2,10 +2,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import LogoSvg from "@/assets/svgs/LogoSvg";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import logo from "@/assets/imgs/hero/whiteLogo.png";
 
-const NavBar = () => {
+const WhiteNavbaar = () => {
   const Navs = [
     { bar: "Home", link: "/" },
     { bar: "Solution", link: "/solution" },
@@ -37,7 +38,7 @@ const NavBar = () => {
     >
       <div className="container flex items-center justify-between max-w-[1440px] px-5 lg:px-10">
         <Link href="/">
-          <LogoSvg />
+          <Image src={logo} alt="logo" width={100} height={100} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -51,10 +52,10 @@ const NavBar = () => {
             <Link
               key={index}
               href={item.link}
-              className={`text-lg transition-colors ${
+              className={`text-lg text-[#ffffff] transition-colors ${
                 pathname === item.link
-                  ? "text-[#000000] font-bold"
-                  : "hover:text-[#0B61EA]"
+                  ? "font-semibold"
+                  : "hover:text-[#9e9e9e]"
               }`}
             >
               {item.bar}
@@ -70,7 +71,7 @@ const NavBar = () => {
         >
           <Link
             href="#"
-            className="hidden lg:flex justify-center items-center text-white font-medium bg-[#0B61EA] rounded-lg w-[190px] p-[14px] active:scale-95 hover:bg-blue-700 transition-colors"
+            className="hidden lg:flex justify-center items-center text-[#0B61EA] font-medium bg-[#ffffff] rounded-lg w-[190px] p-[14px] active:scale-95 hover:bg-blue-700 transition-colors"
           >
             Contact Us
           </Link>
@@ -82,17 +83,17 @@ const NavBar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <motion.span
-            className={`w-8 h-[3px] bg-black transition-transform duration-300 ${
+            className={`w-8 h-[3px] bg-white transition-transform duration-300 ${
               isOpen ? "rotate-45 translate-y-2.5" : ""
             }`}
           />
           <motion.span
-            className={`w-8 h-[3px] bg-black transition-opacity duration-300 ${
+            className={`w-8 h-[3px] bg-white transition-opacity duration-300 ${
               isOpen ? "opacity-0" : "opacity-100"
             }`}
           />
           <motion.span
-            className={`w-8 h-[3px] bg-black transition-transform duration-300 ${
+            className={`w-8 h-[3px] bg-white transition-transform duration-300 ${
               isOpen ? "-rotate-45 -translate-y-2.5" : ""
             }`}
           />
@@ -110,9 +111,9 @@ const NavBar = () => {
               <Link
                 key={index}
                 href={item.link}
-                className={`text-2xl font-medium transition-colors ${
+                className={`text-2xl text-black font-medium transition-colors ${
                   pathname === item.link
-                    ? "text-[#000000] font-bold"
+                    ? "text-[#0B61EA] font-bold"
                     : "hover:text-[#0B61EA]"
                 }`}
                 onClick={() => setIsOpen(false)}
@@ -134,4 +135,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default WhiteNavbaar;

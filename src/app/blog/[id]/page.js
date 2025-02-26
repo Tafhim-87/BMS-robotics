@@ -3,6 +3,7 @@ import React from "react";
 import blogs from "@/Components/blog/data/blogs"; // Import the blogs array
 import Image from "next/image";
 import Link from "next/link";
+import NavBar from "@/Components/home/NavBar";
 
 const BlogDetails = ({ params }) => {
   const { id } = params; // Get the `id` from the URL
@@ -15,7 +16,8 @@ const BlogDetails = ({ params }) => {
   }
 
   return (
-    <div className="w-full flex items-center justify-center font-Urbanist">
+    <div className="w-full flex flex-col items-center justify-center font-Urbanist">
+      <NavBar />
       <div className="container flex flex-col gap-5 max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Breadcrumb Navigation */}
         <div className="flex gap-2 text-sm sm:text-base md:text-lg font-medium">

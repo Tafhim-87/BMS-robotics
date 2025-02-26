@@ -2,10 +2,11 @@ import React from "react";
 import BlogSearch from "./BlogSearch";
 import Image from "next/image";
 import bg from "@/assets/imgs/blog/bgpatturn.png";
+import WhiteNavbaar from "./WhiteNavbar";
 
 const BlogHero = () => {
   return (
-    <div className="w-full flex justify-center items-center relative bg-[#0B61EA] text-[#FFFFFF] py-16 md:py-20 lg:py-28">
+    <div className="w-full flex flex-col justify-center items-center relative bg-[#0B61EA] text-[#FFFFFF]">
       <Image
         src={bg}
         alt="bg"
@@ -13,7 +14,8 @@ const BlogHero = () => {
         width={1440}
         height={800}
       />
-      <div className="container flex flex-col justify-center items-center text-center px-4 z-10">
+      <WhiteNavbaar />
+      <div className="container flex flex-col justify-center items-center text-center px-4 z-10 py-16 md:py-20 lg:py-28">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-tight md:leading-[62px] font-bold">
           Find Your Next Read
         </h1>

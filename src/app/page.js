@@ -10,6 +10,7 @@ import Optimize from "@/Components/home/Optimize";
 import Products from "@/Components/home/Products";
 import Support from "@/Components/home/Support";
 import Loading from "@/Components/home/Loading";
+import NavBar from "@/Components/home/NavBar";
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -72,7 +73,10 @@ const Page = () => {
 
   return (
     <div className="font-Urbanist flex flex-col items-center md:px-10 px-5 justify-center gap-16 overflow-x-hidden">
-      <Hero />
+      <div>
+        <NavBar />
+        <Hero />
+      </div>
       <CompanieLogo />
       <Optimize />
       <Automation />

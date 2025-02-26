@@ -53,7 +53,7 @@ const NavBar = () => {
               href={item.link}
               className={`text-lg transition-colors ${
                 pathname === item.link
-                  ? "text-[#000000] font-bold"
+                  ? "text-[#000000] font-semibold"
                   : "hover:text-[#0B61EA]"
               }`}
             >

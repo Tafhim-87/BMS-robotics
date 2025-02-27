@@ -6,6 +6,7 @@ import NavBar from "@/Components/home/NavBar";
 import ProjectHero from "@/Components/projects/ProjectHero";
 import CompLogo from "@/Components/projects/CompLogo";
 import HowWill from "@/Components/projects/HowWill";
+import Testimonials from "@/Components/projects/Testimonials";
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -72,6 +73,7 @@ const Page = () => {
       <ProjectHero />
       <CompLogo />
       <HowWill />
+      <Testimonials />
     </div>
   );
 };

@@ -4,9 +4,8 @@ import React, { useState, useEffect } from "react";
 import Loading from "@/Components/home/Loading";
 import NavBar from "@/Components/home/NavBar";
 import ProjectHero from "@/Components/projects/ProjectHero";
-import CompLogo from "@/Components/projects/CompLogo";
-import HowWill from "@/Components/projects/HowWill";
 import Testimonials from "@/Components/projects/Testimonials";
+import Information from "@/Components/projects/Information";
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -71,8 +70,7 @@ const Page = () => {
     <div className="font-Urbanist bg-[#ffffff] flex flex-col items-center md:px-10 px-5 justify-center gap-16 overflow-x-hidden">
       <NavBar />
       <ProjectHero />
-      <CompLogo />
-      <HowWill />
+      <Information />
       <Testimonials />
     </div>
   );

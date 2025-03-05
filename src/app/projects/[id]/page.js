@@ -5,9 +5,6 @@ import cardData from "@/Components/projects/data/cardData";
 import Image from "next/image";
 import NavBar from "@/Components/home/NavBar";
 import Link from "next/link";
-import "swiper/css";
-import "swiper/css/pagination";
-
 const ProjectDetail = () => {
   const [visibleImages, setVisibleImages] = useState([0, 1]); // Show first two images by default
   const { id } = useParams();

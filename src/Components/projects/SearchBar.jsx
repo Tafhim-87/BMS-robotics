@@ -8,11 +8,13 @@ const Card = ({ data }) => {
   return (
     <Link href={`/projects/${data.id}`} passHref>
       <motion.div
-        className="bg-[#ffffff]/5 shadow-lg p-2 max-w-[645px] w-full"
+        className="bg-[#ffffff]/5 shadow-lg p-4 w-full max-w-[645px] mx-auto mb-4 rounded-lg"
         whileHover={{ scale: 1.02 }}
       >
         <div className="mt-4 text-gray-700 w-full">
-          <h3 className="font-bold text-[#252529]">{data.title}</h3>
+          <h3 className="font-bold text-[#252529] text-lg sm:text-xl">
+            {data.title}
+          </h3>
         </div>
       </motion.div>
     </Link>
@@ -62,15 +64,15 @@ const SearchBar = () => {
 
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="w-full max-w-[1440px] px-16">
+      <div className="w-full max-w-[1440px] px-4 sm:px-8 md:px-16">
         {/* Search Bar */}
         <div
           ref={dropdownRef}
-          className="flex container bg-white border border-solid rounded-2xl shadow-md p-4 gap-4 mb-8"
+          className="flex flex-col sm:flex-row container bg-white border border-solid rounded-2xl shadow-md p-4 gap-4 mb-8"
           onClick={() => setIsDropdownVisible(true)}
         >
           {/* Search Input */}
-          <div className="flex flex-col w-1/3">
+          <div className="flex flex-col w-full sm:w-1/3">
             <label className="text-sm mb-2">Search</label>
             <div className="relative flex items-center">
               <input
@@ -104,7 +106,7 @@ const SearchBar = () => {
           </div>
 
           {/* Country Dropdown */}
-          <div className="flex flex-col w-1/3">
+          <div className="flex flex-col w-full sm:w-1/3">
             <label className="text-sm mb-2">Country</label>
             <select
               className="w-full p-2 bg-[#F8F8F8] rounded-lg"
@@ -121,7 +123,7 @@ const SearchBar = () => {
           </div>
 
           {/* Year Dropdown */}
-          <div className="flex flex-col w-1/3">
+          <div className="flex flex-col w-full sm:w-1/3">
             <label className="text-sm mb-2">Year</label>
             <select
               className="w-full p-2 bg-[#f8f8f8] rounded-lg"

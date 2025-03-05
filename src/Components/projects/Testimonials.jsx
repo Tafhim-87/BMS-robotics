@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import dot from "@/assets/imgs/projects/dot.png";
+import dot from "@/assets/imgs/projects/Dot.png";
 import ellipse from "@/assets/imgs/projects/ellipse.png";
 import groupPeo from "@/assets/imgs/projects/groupPeo.png";
 import img1 from "@/assets/imgs/projects/person.jpg";

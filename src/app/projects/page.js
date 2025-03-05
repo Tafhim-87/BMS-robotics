@@ -6,6 +6,8 @@ import NavBar from "@/Components/home/NavBar";
 import ProjectHero from "@/Components/projects/ProjectHero";
 import Testimonials from "@/Components/projects/Testimonials";
 import Information from "@/Components/projects/Information";
+import Automation from "@/Components/projects/Automation";
+import SearchBar from "@/Components/projects/SearchBar";
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -70,7 +72,9 @@ const Page = () => {
     <div className="font-Urbanist bg-[#ffffff] flex flex-col items-center md:px-10 px-5 justify-center gap-16 overflow-x-hidden">
       <NavBar />
       <ProjectHero />
+      <SearchBar />
       <Information />
+      <Automation />
       <Testimonials />
     </div>
   );

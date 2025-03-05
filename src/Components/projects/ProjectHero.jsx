@@ -31,7 +31,7 @@ const ProjectHero = () => {
   };
 
   return (
-    <section className="w-full flex justify-center items-center relative overflow-hidden">
+    <section className="w-full flex justify-center items-center relative">
       {/* Content Container */}
       <div className="container max-w-[1440px] flex items-center justify-between z-10 px-4 sm:px-8 md:px-10">
         {/* Text Content */}
@@ -79,11 +79,17 @@ const ProjectHero = () => {
             </motion.button>
           </motion.div>
         </motion.div>
-        <div className="relative">
+        <div className="relative flex justify-center items-center w-[625px]">
+          <div className="bg-[#0B61EA] blur-[400px] rounded-full inset-0 z-0 w-[400px] h-[400px]"></div>
           <div className="z-10">
-            <Image src={hero} alt="hero" width={625} height={425} />
+            <Image
+              src={hero}
+              alt="hero"
+              width={625}
+              height={425}
+              className="absolute top-0 left-0 w-[625px]"
+            />
           </div>
-          {/* <div className="bg-[#0b61ea5e] blur-[800px] w-[400px] h-[400px] inset-0 z-0 top-[-10%] left-[10%] rounded-full absolute"></div> */}
         </div>
       </div>
     </section>

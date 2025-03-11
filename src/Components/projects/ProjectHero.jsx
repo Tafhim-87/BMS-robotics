@@ -33,7 +33,7 @@ const ProjectHero = () => {
   return (
     <section className="w-full flex justify-center items-center relative">
       {/* Content Container */}
-      <div className="container max-w-[1440px] flex items-center justify-between z-10 px-4 sm:px-8 md:px-10">
+      <div className="container max-w-[1440px] flex flex-col lg:flex-row gap-14 md:gap-10 lg:gap-0 items-center justify-between z-10">
         {/* Text Content */}
         <motion.div
           variants={containerVariants}
@@ -45,7 +45,7 @@ const ProjectHero = () => {
             variants={itemVariants}
             className="flex flex-col gap-5 sm:gap-[27px] max-w-full md:max-w-[753px]"
           >
-            <h1 className="text-[#1D242D] text-2xl sm:text-4xl md:text-[52px] leading-tight sm:leading-[45px] md:leading-[57px] font-bold">
+            <h1 className="text-[#1D242D] text-3xl sm:text-4xl md:text-[52px] leading-tight sm:leading-[45px] md:leading-[57px] font-bold">
               Pioneering <span className="text-[#0B61EA]">Robotics</span>{" "}
               Solutions <br /> Across Industries
             </h1>
@@ -79,8 +79,8 @@ const ProjectHero = () => {
             </motion.button>
           </motion.div>
         </motion.div>
-        <div className="relative flex justify-center items-center w-[625px]">
-          <div className="bg-[#0B61EA] blur-[400px] rounded-full inset-0 z-0 w-[400px] h-[400px]"></div>
+        <div className="relative flex justify-center items-center w-full md:w-[625px]">
+          <div className="bg-[#063784] blur-[400px] rounded-full inset-0 z-0 w-[400px] h-[400px]"></div>
           <div className="z-10">
             <Image
               src={hero}

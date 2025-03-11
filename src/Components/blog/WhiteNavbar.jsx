@@ -11,7 +11,6 @@ const WhiteNavbaar = () => {
     { bar: "Home", link: "/" },
     { bar: "Solution", link: "/solution" },
     { bar: "Projects", link: "/projects" },
-    { bar: "Jobs", link: "/jobs" },
     { bar: "Blog", link: "/blog" },
   ];
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +69,7 @@ const WhiteNavbaar = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <Link
-            href="#"
+            href="/contactUs"
             className="hidden lg:flex justify-center items-center text-[#0B61EA] font-medium bg-[#ffffff] rounded-lg w-[190px] p-[14px] active:scale-95 hover:bg-blue-700 transition-colors"
           >
             Contact Us
@@ -120,7 +119,7 @@ const WhiteNavbaar = () => {
               </Link>
             ))}
             <Link
-              href="#"
+              href="/contactUs"
               className="text-white font-medium bg-[#0B61EA] rounded-lg w-[190px] p-4 text-center hover:bg-blue-700 transition-colors"
               onClick={() => setIsOpen(false)}
             >

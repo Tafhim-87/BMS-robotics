@@ -10,7 +10,6 @@ const NavBar = () => {
     { bar: "Home", link: "/" },
     { bar: "Solution", link: "/solution" },
     { bar: "Projects", link: "/projects" },
-    { bar: "Jobs", link: "/jobs" },
     { bar: "Blog", link: "/blog" },
   ];
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +34,7 @@ const NavBar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="container flex items-center justify-between max-w-[1440px] px-5 lg:px-10">
+      <div className="container flex items-center justify-between max-w-[1440px]">
         <Link href="/">
           <LogoSvg />
         </Link>
@@ -69,7 +68,7 @@ const NavBar = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <Link
-            href="#"
+            href="/contactUs"
             className="hidden lg:flex justify-center items-center text-white font-medium bg-[#0B61EA] rounded-lg w-[190px] p-[14px] active:scale-95 hover:bg-blue-700 transition-colors"
           >
             Contact Us
@@ -119,7 +118,7 @@ const NavBar = () => {
               </Link>
             ))}
             <Link
-              href="#"
+              href="/contactUs"
               className="text-white font-medium bg-[#0B61EA] rounded-lg w-[190px] p-4 text-center hover:bg-blue-700 transition-colors"
               onClick={() => setIsOpen(false)}
             >

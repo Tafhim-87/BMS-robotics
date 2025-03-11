@@ -71,7 +71,7 @@ const SolutionsHero = () => {
             variants={itemVariants}
             className="flex flex-col gap-5 sm:gap-[27px] max-w-full md:max-w-[753px]"
           >
-            <h1 className="text-[#1D242D] text-2xl sm:text-4xl md:text-[52px] leading-tight sm:leading-[45px] md:leading-[57px] font-bold">
+            <h1 className="text-[#1D242D] text-3xl sm:text-4xl md:text-[52px] leading-tight sm:leading-[45px] md:leading-[57px] font-bold">
               Tailored Robotics{" "}
               <span className="text-[#0B61EA]">Solutions</span> for{" "}
               <br className="hidden md:block" />

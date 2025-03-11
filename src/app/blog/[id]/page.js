@@ -16,9 +16,9 @@ const BlogDetails = ({ params }) => {
   }
 
   return (
-    <div className="w-full flex flex-col items-center justify-center font-Urbanist">
+    <div className="w-full flex flex-col items-center justify-center font-Urbanist px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
       <NavBar />
-      <div className="container flex flex-col gap-5 max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
+      <div className="container flex flex-col gap-5 max-w-[1440px] ">
         {/* Breadcrumb Navigation */}
         <div className="flex gap-2 text-sm sm:text-base md:text-lg font-medium">
           <Link href="/blog">Home</Link>/<Link href="/blog">Blog</Link>/

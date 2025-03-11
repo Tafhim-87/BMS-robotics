@@ -71,7 +71,7 @@ export default function Testimonials() {
             alt="ellipse"
             width={120}
             height={120}
-            className="absolute bottom-[-10px] left-[0px] z-0"
+            className="absolute hidden lg:block bottom-[-10px] left-[0px] z-0"
           />
 
           {/* Carousel Content */}
@@ -82,7 +82,7 @@ export default function Testimonials() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 100 }}
               transition={{ duration: 0.5 }}
-              className="flex gap-4 max-w-[70%] z-10"
+              className="flex flex-col md:flex-row gap-4 max-w-full items-center lg:max-w-[70%] z-10"
             >
               {/* Testimonial Image */}
               <Image
@@ -90,7 +90,7 @@ export default function Testimonials() {
                 alt={testimonials[current].name}
                 width={400}
                 height={400}
-                className="rounded-br-full min-h-[400px] rounded-l-full"
+                className="rounded-br-full min-h-auto md:min-h-[400px] rounded-l-full"
               />
 
               {/* Testimonial Text and Dots Indicator */}
@@ -126,7 +126,7 @@ export default function Testimonials() {
           </AnimatePresence>
 
           {/* Circle */}
-          <div>
+          <div className="hidden lg:block">
             <Image src={groupPeo} alt="" width={400} height={400} />
           </div>
         </div>

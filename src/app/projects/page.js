@@ -69,7 +69,7 @@ const Page = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="font-Urbanist bg-[#ffffff] flex flex-col items-center md:px-10 px-5 justify-center gap-16 overflow-x-hidden">
+    <div className="font-Urbanist bg-[#ffffff] flex flex-col items-center md:px-4 px-4 justify-center gap-16 overflow-x-hidden">
       <NavBar />
       <ProjectHero />
       <SearchBar />

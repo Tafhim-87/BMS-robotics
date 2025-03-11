@@ -75,7 +75,7 @@ const Page = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="font-Urbanist flex flex-col items-center md:px-10 px-5 justify-center gap-16 overflow-x-hidden">
+    <div className="font-Urbanist flex flex-col items-center justify-center gap-16 overflow-x-hidden">
       <SolutionsHero />
       <IndustrialAutomation />
       <IndustrialAutomation2 />

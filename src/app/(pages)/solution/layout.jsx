@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   const isBlogPage = pathname.startsWith("/blog");
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col px-4">
       {!isBlogPage && <NavBar />}
       <main className="flex-1">{children}</main>
       {!isBlogPage && <Footer />}

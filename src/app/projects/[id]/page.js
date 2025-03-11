@@ -29,9 +29,9 @@ const ProjectDetail = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center sm:px-8 px-4 md:px-10">
       <NavBar />
-      <div className="container flex flex-col items-center justify-center py-10 px-4 sm:px-8 md:px-10 max-w-[1212px]">
+      <div className="container flex flex-col items-center justify-center py-10 px-4 max-w-[1212px]">
         <div className="flex items-start w-full gap-2 text-sm sm:text-base md:text-lg font-medium mb-4">
           <Link href="/projects">Home</Link> /
           <Link href="/projects">Projects</Link> /

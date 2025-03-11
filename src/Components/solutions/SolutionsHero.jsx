@@ -59,7 +59,7 @@ const SolutionsHero = () => {
       </motion.div>
 
       {/* Content Container */}
-      <div className="container max-w-[1440px] flex flex-col z-10 px-4 sm:px-8 md:px-16">
+      <div className="container max-w-[1440px] flex flex-col z-10 px-0 sm:px-8 md:px-16">
         {/* Text Content */}
         <motion.div
           variants={containerVariants}

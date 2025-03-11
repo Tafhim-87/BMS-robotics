@@ -14,7 +14,6 @@ export default function Layout({ children }) {
     <div className="min-h-screen flex flex-col px-4">
       {!isBlogPage && <NavBar />}
       <main className="flex-1">{children}</main>
-      {!isBlogPage && <Footer />}
     </div>
   );
 }

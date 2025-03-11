@@ -32,7 +32,7 @@ const Hero = () => {
         className="absolute inset-0 top-0 md:top-0 left-0 w-full h-full"
       />
       ;
-      <div className="container flex flex-col gap-[30px] md:gap-[60px] mt-10 md:mt-20 z-10 max-w-[1440px] px-4">
+      <div className="container flex flex-col gap-[30px] md:gap-[60px] mt-10 md:mt-20 z-10 max-w-[1440px]">
         {/* Text Content */}
         <motion.div
           className="text-center w-full flex flex-col gap-2 justify-center items-center"

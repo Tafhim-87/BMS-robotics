@@ -52,9 +52,7 @@ const WhiteNavbaar = () => {
               key={index}
               href={item.link}
               className={`text-lg text-[#ffffff] transition-colors ${
-                pathname === item.link
-                  ? "font-semibold"
-                  : "hover:text-[#9e9e9e]"
+                pathname === item.link ? "font-semibold" : "font-normal"
               }`}
             >
               {item.bar}
@@ -70,7 +68,7 @@ const WhiteNavbaar = () => {
         >
           <Link
             href="/contactUs"
-            className="hidden lg:flex justify-center items-center text-[#0B61EA] font-medium bg-[#ffffff] rounded-lg w-[190px] p-[14px] active:scale-95 hover:bg-blue-700 transition-colors"
+            className="hidden lg:flex justify-center items-center text-[#0B61EA] font-medium bg-[#ffffff] rounded-lg w-[190px] p-[14px] active:scale-95"
           >
             Contact Us
           </Link>

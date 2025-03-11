@@ -7,6 +7,7 @@ import img2 from "@/assets/imgs/contactForm/icn2.png";
 import img3 from "@/assets/imgs/contactForm/icn3.png";
 import img4 from "@/assets/imgs/contactForm/icn4.png";
 import img5 from "@/assets/imgs/contactForm/icn5.png";
+import Bg from "@/assets/imgs/hero/gridBg.jpeg";
 
 const icons = [img2, img3, img4, img5];
 
@@ -29,11 +30,18 @@ const childVariants = {
 const ContactHero = () => {
   return (
     <motion.div
-      className="w-full flex justify-center items-center mb-20 md:mb-0"
+      className="w-full flex justify-center items-center mb-20 md:mb-0 relative"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
+      <Image
+        src={Bg}
+        alt=""
+        width={1440}
+        height={800}
+        className="absolute inset-0 top-0 md:top-0 left-0 w-full h-full"
+      />
       <div className="container relative flex flex-col md:flex-row items-center md:justify-between justify-center gap-5 max-w-[1440px] md:px-10 md:h-[90vh]">
         <div className="bg-[#6FA6FD]/20 blur-[400px] rounded-full inset-0 z-0 w-full h-[400px] absolute"></div>
 

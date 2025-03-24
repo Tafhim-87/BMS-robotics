@@ -3,6 +3,7 @@
 import { useState } from "react"; // Import useState for pagination
 import blogs from "@/Components/blog/data/blogs";
 import projects from "@/Components/projects/data/cardData";
+import products from "@/Components/home/productData";
 import Image from "next/image";
 
 const Dashboard = () => {
@@ -48,7 +49,7 @@ const Dashboard = () => {
                     : 0 || title === "Total Projects"
                     ? projects.length
                     : 0 || title === "Total Product"
-                    ? 0
+                    ? products.length
                     : 0}
                 </h2>
               </div>

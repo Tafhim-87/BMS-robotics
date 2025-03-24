@@ -11,6 +11,7 @@ import Products from "@/Components/home/Products";
 import Support from "@/Components/home/Support";
 import Loading from "@/Components/home/Loading";
 import NavBar from "@/Components/home/NavBar";
+import { Footer } from "@/Components/home/Footer";
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -86,6 +87,7 @@ const Page = () => {
         <Support />
         <ConnectForm />
       </div>
+      <Footer />
     </>
   );
 };

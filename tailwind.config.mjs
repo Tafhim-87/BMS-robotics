@@ -12,6 +12,7 @@ export default {
       },
       fontFamily: {
         Urbanist: ["Urbanist", "serif"],
+        Nunito: ["Nunito Sans", "serif"],
       },
     },
   },

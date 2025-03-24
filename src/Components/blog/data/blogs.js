@@ -9,6 +9,7 @@ const blogs = [
       "Discover how Industry 4.0 is reshaping the automation industry.",
     content: "Industry 4.0 introduces smart automation, IoT, and AI...",
     image: img1,
+    date: "May 20, 2023",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const blogs = [
       "Artificial Intelligence is driving efficiency in factories worldwide.",
     content: "AI is automating quality control and predictive maintenance...",
     image: img1,
+    date: "May 20, 2023",
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const blogs = [
     description: "Robots are revolutionizing the manufacturing process.",
     content: "Factories are adopting robotic arms for precision tasks...",
     image: img1,
+    date: "May 20, 2023",
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const blogs = [
     description: "Robots are revolutionizing the manufacturing process.",
     content: "Factories are adopting robotic arms for precision tasks...",
     image: img1,
+    date: "May 20, 2023",
   },
   {
     id: 5,
@@ -42,24 +46,17 @@ const blogs = [
     description: "Robots are revolutionizing the manufacturing process.",
     content: "Factories are adopting robotic arms for precision tasks...",
     image: img1,
+    date: "May 20, 2023",
   },
   {
     id: 6,
     title: "The Role of Robotics in Modern Factories 6",
-    categories: [
-      "Robotics",
-      "Automation",
-      "Automation",
-      "Automation",
-      "Automation",
-      ,
-      "Automation",
-      "Automation",
-    ],
+    categories: ["Robotics", "Automation"],
     description:
       "Robots are revolutionizing the manufacturing process. loremLorem ipsum dolor sit amet consectetur. Blandit aliquam amet lacus viverra quis amet magnis. Quis malesuada arcu tincidunt tincidunt maecenas vestibulum est. Nec mi fames parturient ornare proin id. Morbi amet arcu ut augue. Velit a nullam neque proin sed. Aliquet faucibus ac neque lacus in mi. Integer nunc id vitae mauris. Faucibus urna nunc tellus risus purus velit morbi risus. In a eu gravida ipsum dictumst sed posuere nunc in. Phasellus ut id vestibulum et. Quis sodales semper convallis massa id at. Cras orci nunc tellus sem fermentum. Odio posuere ipsum et in ut ac integer ornare diam. Neque vitae pellentesque lectus vitae tincidunt. Mauris aenean tellus in urna morbi.",
     content: "Factories are adopting robotic arms for precision tasks...",
     image: img1,
+    date: "May 20, 2023",
   },
   {
     id: 7,
@@ -68,6 +65,7 @@ const blogs = [
     description: "Robots are revolutionizing the manufacturing process.",
     content: "Factories are adopting robotic arms for precision tasks...",
     image: img1,
+    date: "May 20, 2023",
   },
   {
     id: 8,
@@ -76,6 +74,7 @@ const blogs = [
     description: "Robots are revolutionizing the manufacturing process.",
     content: "Factories are adopting robotic arms for precision tasks...",
     image: img1,
+    date: "May 20, 2023",
   },
 ];
 

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import "react-quill-new/dist/quill.snow.css";
-import Uplabel from "@/assets/svgs/add/uplabel";
+import Uplabel from "@/assets/svgs/add/Uplabel";
 
 // Dynamically import react-quill-new to prevent SSR issues
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
